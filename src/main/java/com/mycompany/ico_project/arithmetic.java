@@ -13,7 +13,9 @@ public class arithmetic {
                 System.out.println("2. Subtraction");
                 System.out.println("3. Multiplication");
                 System.out.println("Exit");
+                
                 System.out.print("Choose an option: ");
+
                 
                 String input = scanner.nextLine();
 
@@ -25,6 +27,8 @@ public class arithmetic {
                 int choice = Integer.parseInt(input);
 
                 if (choice == 1) {                                          //addition
+                    System.out.println("\n*************************************************");
+                    System.out.println("Addition selected.");
                     System.out.print("Enter first number (decimal): ");
                     int num1 = scanner.nextInt();
                     
@@ -44,9 +48,12 @@ public class arithmetic {
                     
                     System.out.println("Binary sum: " + sum);
                     System.out.println("Decimal sum: " + decimalSum);
+                    System.out.println("*************************************************");
                 }
 
                 if(choice == 2){                                            //subtraction
+                    System.out.println("\n*************************************************");
+                    System.out.println("Subtraction selected.");
                     System.out.print("Insert first number in decimal: ");
                     int num1 = scanner.nextInt();
                     System.out.print("Insert second number in decimal: ");
@@ -75,13 +82,15 @@ public class arithmetic {
                     System.out.println(binary1 + " - " + binary2 + " = " + resultBinary + " (" + signCheck + ")");
                     System.out.println();
                     System.out.println(resultBinary + " in decimal is " + resultDecimal);
+                    System.out.println("*************************************************");
                 }
 
                 if(choice == 3){
                     int M = 0;   //multiplier
                     int Q = 0;   //multiplicand
                     int n = 0;   //number of bits
-
+                    System.out.println("\n*************************************************");
+                    System.out.println("Multiplication selected.");
                     System.out.print("Enter 1st value (in decimal): ");  //input values in decimal
                     int num1 = scanner.nextInt();
                     System.out.print("Enter 2nd value (in decimal): ");
@@ -153,6 +162,7 @@ public class arithmetic {
         String binaryStr = new String(binary);
         
         if (isNegative) {
+           
             return findTwosComplement(binaryStr);
         }
         
@@ -242,7 +252,7 @@ public class arithmetic {
             }
             twosComplement[i] = '0';
         }
-        
+       
         return new String(twosComplement);
     }
     
@@ -312,6 +322,7 @@ public class arithmetic {
             int result = (A << bits) | Q;
             System.out.println("\nFinal value in binary: "+converter(result,(bits*2)));
             System.out.println("Final value in decimal: "+result);    //display final result
+            System.out.println("*************************************************");
     }
 
     private static String converter(int a, int bits){  //to binary converter
