@@ -13,6 +13,7 @@ public class arithmetic {
                 System.out.println("2. Subtraction");
                 System.out.println("3. Multiplication");
                 System.out.println("Exit");
+                System.out.println("Heelo");
                 
                 System.out.print("Choose an option: ");
 
