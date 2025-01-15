@@ -227,110 +227,53 @@ System.out.println("------------------------------------------------------------
 
     public static void Addition() {
         //addition
-        int num1;
-        int num2;
         System.out.println("\n==============================================================");
         System.out.println("                    ADDITION SELECTED");
         System.out.println("==============================================================");
+        int num1;
+        int num2;
         while (true) {
             try {
                 System.out.println("--------------------------------------------------------------");
                 System.out.print("Enter first number (decimal): ");
                 num1 = scanner.nextInt();
-
                 System.out.print("Enter second number (decimal): ");
                 num2 = scanner.nextInt();
                 System.out.println("--------------------------------------------------------------");
                 break;
-                
             } catch (InputMismatchException e) {
-                     System.out.println("*******************************************");
+                System.out.println("*******************************************");
                 System.out.println("Invalid Decimal Number. Please Enter Again");
                 System.out.println("*******************************************");
                 scanner.nextLine();
             }
-
-        }
-        // Convert to binary
-        String bin1 = decimalToBinary(Math.abs(num1));
-        String bin2 = decimalToBinary(Math.abs(num2));
-
-        // Make sure both binary numbers have the same length
-        int maxLength = Math.max(bin1.length(), bin2.length());
-        bin1 = padZeros(bin1, maxLength);
-        bin2 = padZeros(bin2, maxLength);
-
-        System.out.println("\n=== Detailed Calculation Steps ===");
-
-        // First number processing
-        System.out.println("\nFirst Number (" + num1 + "):");
-        System.out.println("Binary: " + bin1);
-        if (num1 < 0) {
-            System.out.println("Number is negative, calculating two's complement:");
-            String onesComp1 = findOnesComplement(bin1);
-            System.out.println("One's complement: " + onesComp1);
-            String twosComp1 = findTwosComplement(bin1);
-            System.out.println("Two's complement (One's complement + 1): 1" + twosComp1);
-            bin1 = twosComp1;
         }
 
-        // Second number processing
-        System.out.println("\nSecond Number (" + num2 + "):");
-        System.out.println("Binary: " + bin2);
-        if (num2 < 0) {
-            System.out.println("Number is negative, calculating two's complement:");
-            String onesComp2 = findOnesComplement(bin2);
-            System.out.println("One's complement: " + onesComp2);
-            String twosComp2 = findTwosComplement(bin2);
-            System.out.println("Two's complement (One's complement + 1): 1" + twosComp2);
-            bin2 = twosComp2;
-        }
+        // Determine the number of bits needed for representation
+        int maxAbsValue = Math.max(Math.abs(num1), Math.abs(num2));
+        int bit = Integer.toBinaryString(maxAbsValue).length() + 2; // Add extra bit for sign handling
 
-        // Addition results
-        System.out.println("\nAddition:");
-        if(num1 < 0) {
-            System.out.println("First number:  1" + bin1);
-        }
-        
-        if(num2 < 0) {
-            System.out.println("Second number:  1" + bin2);
-        }
-        
-        if(num1 > 0) {
-            System.out.println("First number:  " + bin1);
-        }
-        
-        if(num2 > 0) {
-            System.out.println("Second number: " + bin2);
-        }
-        
-        String binarySum = addBinary(bin1, bin2);
-        int decimalSum = num1 + num2;
-        
-        if(decimalSum < -8){
-            System.out.println("Binary sum:    10" + binarySum);
-        }
-        
-        if(decimalSum == -8){
-            System.out.println("Binary sum:    1" + binarySum);
-        }
+        // Convert numbers to binary
+        String binary1 = toBinary(num1, bit);
+        String binary2 = toBinary(num2, bit);
 
-        if(decimalSum > -8){
-            System.out.println("Binary sum:    " + binarySum);
-        }
-        
-        System.out.println("Decimal sum:   " + decimalSum);
+        // Perform addition
+        int resultDecimal = num1 + num2;
+        String resultBinary = toBinary(resultDecimal, bit);
 
-//        if (decimalSum < 0) {
-//            System.out.println("\nFinal result is negative:");
-//            String sumOnesComp = findOnesComplement(binarySum);
-//            String sumTwosComp = findTwosComplement(binarySum);
-//            System.out.println("One's complement of sum: " + sumOnesComp);
-//            System.out.println("Two's complement of sum: " + sumTwosComp);
-//        }
-        
+        // Determine sign of the result
+        String signCheck = (resultDecimal >= 0) ? "positive" : "negative";
+
+        // Display results
+        System.out.println("\nResults:");
+        System.out.println(num1 + " in binary = " + binary1);
+        System.out.println(num2 + " in binary = " + binary2);
+        System.out.println();
+        System.out.println(num1 + " + " + num2);
+        System.out.println(binary1 + " + " + binary2 + " = " + resultBinary + " (" + signCheck + ")");
+        System.out.println();
+        System.out.println(resultBinary + " in decimal is " + resultDecimal);
         System.out.println("\n==============================================================");
-
     }
 
     public static void Substraction() {
@@ -445,104 +388,11 @@ System.out.println("------------------------------------------------------------
     }
 
     //Addtion Method Start
-    public static String decimalToBinary(int decimal) {
-        boolean isNegative = decimal < 0;
-        decimal = Math.abs(decimal);
-
-        char[] binary = new char[32];
-        int index = 31;
-
-        while (decimal > 0) {
-            binary[index--] = (char) ((decimal % 2) + '0');
-            decimal /= 2;
-        }
-
-        for (int i = 0; i <= index; i++) {
-            binary[i] = '0';
-        }
-
-        String result = new String(binary, index + 1, 32 - index - 1);
-
-        if (isNegative) {
-            result = findTwosComplement(result);
-            result = "1" + result; // Add leading 1 for negative numbers
-        }
-
-        return trimLeadingZeros(result);
-    }
-
-    public static String addBinary(String a, String b) {
-        int maxLength = Math.max(a.length(), b.length());
-        a = padZeros(a, maxLength);
-        b = padZeros(b, maxLength);
-
-        char[] result = new char[maxLength + 1];
-        int carry = 0;
-        int resultIndex = result.length - 1;
-
-        for (int i = maxLength - 1; i >= 0; i--) {
-            int bitA = a.charAt(i) - '0';
-            int bitB = b.charAt(i) - '0';
-            int sum = bitA + bitB + carry;
-            result[resultIndex--] = (char) ((sum % 2) + '0');
-            carry = sum / 2;
-        }
-
-        if (carry > 0) {
-            result[resultIndex] = '1';
-        }
-
-        return trimLeadingZeros(new String(result));
-    }
-
-    public static String findOnesComplement(String binary) {
-        char[] onesComplement = new char[binary.length()];
-        for (int i = 0; i < binary.length(); i++) {
-            onesComplement[i] = (binary.charAt(i) == '0') ? '1' : '0';
-        }
-        return new String(onesComplement);
-    }
-
-    public static String findTwosComplement(String binary) {
-        char[] onesComplement = new char[binary.length()];
-        for (int i = 0; i < binary.length(); i++) {
-            onesComplement[i] = (binary.charAt(i) == '0') ? '1' : '0';
-        }
-
-        char[] twosComplement = new char[onesComplement.length];
-        int carry = 1;
-
-        for (int i = onesComplement.length - 1; i >= 0; i--) {
-            int sum = (onesComplement[i] - '0') + carry;
-            twosComplement[i] = (char) ((sum % 2) + '0');
-            carry = sum / 2;
-        }
-
-        return new String(twosComplement);
-    }
-
-    private static String padZeros(String binary, int length) {
-        char[] padded = new char[length];
-        int padding = length - binary.length();
-
-        for (int i = 0; i < padding; i++) {
-            padded[i] = '0';
-        }
-
-        for (int i = 0; i < binary.length(); i++) {
-            padded[i + padding] = binary.charAt(i);
-        }
-
-        return new String(padded);
-    }
-
-    private static String trimLeadingZeros(String binary) {
-        int index = 0;
-        while (index < binary.length() && binary.charAt(index) == '0') {
-            index++;
-        }
-        return index == binary.length() ? "0" : binary.substring(index);
-    }
+//    private static String toBinary(int num, int bit) {
+//        int mask = (1 << bit) - 1;
+//        String binary = Integer.toBinaryString(num & mask); // Handles 2's complement representation
+//        return String.format("%" + bit + "s", binary).replace(' ', '0');
+//    }
     //Addition Method Stop
 
     //Subtraction Method Start
