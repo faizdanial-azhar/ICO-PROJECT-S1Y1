@@ -1,0 +1,1773 @@
+#
+# A fatal error has been detected by the Java Runtime Environment:
+#
+#  EXCEPTION_ACCESS_VIOLATION (0xc0000005) at pc=0x000001e870062fb4, pid=20960, tid=22232
+#
+# JRE version: OpenJDK Runtime Environment (23.0.1+11) (build 23.0.1+11-39)
+# Java VM: OpenJDK 64-Bit Server VM (23.0.1+11-39, mixed mode, sharing, tiered, compressed oops, compressed class ptrs, g1 gc, windows-amd64)
+# Problematic frame:
+# J 1165 c1 sun.nio.cs.UTF_8$Decoder.decodeArrayLoop(Ljava/nio/ByteBuffer;Ljava/nio/CharBuffer;)Ljava/nio/charset/CoderResult; java.base@23.0.1 (688 bytes) @ 0x000001e870062fb4 [0x000001e870061120+0x0000000000001e94]
+#
+# No core dump will be written. Minidumps are not enabled by default on client versions of Windows
+#
+# If you would like to submit a bug report, please visit:
+#   https://bugreport.java.com/bugreport/crash.jsp
+#
+
+---------------  S U M M A R Y ------------
+
+Command Line: -Dclassworlds.conf=C:\Program Files\NetBeans-23\netbeans\java\maven\bin\m2.conf -Dmaven.home=C:\Program Files\NetBeans-23\netbeans\java\maven -Dlibrary.jansi.path=C:\Program Files\NetBeans-23\netbeans\java\maven\lib\jansi-native -Dmaven.multiModuleProjectDirectory=C:\Users\User\OneDrive\Desktop\JavaProject\ICO-PROJECT-S1Y1 org.codehaus.plexus.classworlds.launcher.Launcher -Dexec.vmArgs= -Dexec.args=${exec.vmArgs} -classpath %classpath ${exec.mainClass} ${exec.appArgs} -Dexec.executable=C:\Program Files\Java\jdk-23.0.1\bin\java.exe -Dexec.mainClass=com.mycompany.ico_project.ComputerArithemtic -Dexec.classpathScope=runtime -Dexec.appArgs= -Dmaven.ext.class.path=C:\Program Files\NetBeans-23\netbeans\java\maven-nblib\netbeans-eventspy.jar --no-transfer-progress process-classes org.codehaus.mojo:exec-maven-plugin:3.1.0:exec
+
+Host: 11th Gen Intel(R) Core(TM) i5-11300H @ 3.10GHz, 8 cores, 7G,  Windows 11 , 64 bit Build 22621 (10.0.22621.4391)
+Time: Tue Jan 14 20:56:07 2025 Malay Peninsula Standard Time elapsed time: 0.443441 seconds (0d 0h 0m 0s)
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x000001e865355130):  JavaThread "main"             [_thread_in_Java, id=22232, stack(0x000000c74d700000,0x000000c74d800000) (1024K)]
+
+Stack: [0x000000c74d700000,0x000000c74d800000],  sp=0x000000c74d7fd5e0,  free space=1013k
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+C  0x000001e870062fb4  (no source info available)
+
+The last pc belongs to nmethod (printed below).
+
+siginfo: EXCEPTION_ACCESS_VIOLATION (0xc0000005), reading address 0xffffffffffffffff
+
+
+Registers:
+RAX=0x0000000000000002, RBX=0x000000008b5a2b60, RCX=0x0000000000002000, RDX=0x000101e84624d610
+RSP=0x000000c74d7fd5e0, RBP=0x000000c74d7fdb38, RSI=0x000000008b473578, RDI=0x0000000000000020
+R8 =0x000001e84624d610, R9 =0x0000000000000328, R10=0x0000000000000001, R11=0x0000000000000002
+R12=0x0000000000000000, R13=0x0000000000000e73, R14=0x000000008c70c238, R15=0x000001e865355130
+RIP=0x000001e870062fb4, EFLAGS=0x0000000000010246
+
+
+Register to memory mapping:
+
+RAX=0x0000000000000002 is an unknown value
+RBX=0x000000008b5a2b60 is an oop: [B 
+{0x000000008b5a2b60} - klass: {type array byte}
+ - length: 8192
+ -   0: 20  
+ -   1: 20  
+ -   2: 20  
+ -   3: 20  
+ -   4: 20  
+ -   5: 20  
+ -   6: 20  
+ -   7: 3c <
+ -   8: 72 r
+ -   9: 65 e
+ -  10: 71 q
+ -  11: 75 u
+ -  12: 69 i
+ -  13: 72 r
+ -  14: 65 e
+ -  15: 6d m
+ -  16: 65 e
+ -  17: 6e n
+ -  18: 74 t
+ -  19: 3e >
+ -  20: d  
+ -  21: a  
+ -  22: 20  
+ -  23: 20  
+ -  24: 20  
+ -  25: 20  
+ -  26: 20  
+ -  27: 20  
+ -  28: 20  
+ -  29: 20  
+ -  30: 20  
+ -  31: 20  
+ -  32: 3c <
+ -  33: 72 r
+ -  34: 6f o
+ -  35: 6c l
+ -  36: 65 e
+ -  37: 3e >
+ -  38: 6f o
+ -  39: 72 r
+ -  40: 67 g
+ -  41: 2e .
+ -  42: 61 a
+ -  43: 70 p
+ -  44: 61 a
+ -  45: 63 c
+ -  46: 68 h
+ -  47: 65 e
+ -  48: 2e .
+ -  49: 6d m
+ -  50: 61 a
+ -  51: 76 v
+ -  52: 65 e
+ -  53: 6e n
+ -  54: 2e .
+ -  55: 72 r
+ -  56: 74 t
+ -  57: 69 i
+ -  58: 6e n
+ -  59: 66 f
+ -  60: 6f o
+ -  61: 2e .
+ -  62: 52 R
+ -  63: 75 u
+ -  64: 6e n
+ -  65: 74 t
+ -  66: 69 i
+ -  67: 6d m
+ -  68: 65 e
+ -  69: 49 I
+ -  70: 6e n
+ -  71: 66 f
+ -  72: 6f o
+ -  73: 72 r
+ -  74: 6d m
+ -  75: 61 a
+ -  76: 74 t
+ -  77: 69 i
+ -  78: 6f o
+ -  79: 6e n
+ -  80: 3c <
+ -  81: 2f /
+ -  82: 72 r
+ -  83: 6f o
+ -  84: 6c l
+ -  85: 65 e
+ -  86: 3e >
+ -  87: d  
+ -  88: a  
+ -  89: 20  
+ -  90: 20  
+ -  91: 20  
+ -  92: 20  
+ -  93: 20  
+ -  94: 20  
+ -  95: 20  
+ -  96: 20  
+ -  97: 20  
+ -  98: 20  
+ -  99: 3c <
+ - 100: 66 f
+ - 101: 69 i
+ - 102: 65 e
+ - 103: 6c l
+ - 104: 64 d
+ - 105: 2d -
+ - 106: 6e n
+ - 107: 61 a
+ - 108: 6d m
+ - 109: 65 e
+ - 110: 3e >
+ - 111: 72 r
+ - 112: 74 t
+ - 113: 49 I
+ - 114: 6e n
+ - 115: 66 f
+ - 116: 6f o
+ - 117: 3c <
+ - 118: 2f /
+ - 119: 66 f
+ - 120: 69 i
+ - 121: 65 e
+ - 122: 6c l
+ - 123: 64 d
+ - 124: 2d -
+ - 125: 6e n
+ - 126: 61 a
+ - 127: 6d m
+ - 128: 65 e
+ - 129: 3e >
+ - 130: d  
+ - 131: a  
+ - 132: 20  
+ - 133: 20  
+ - 134: 20  
+ - 135: 20  
+ - 136: 20  
+ - 137: 20  
+ - 138: 20  
+ - 139: 20  
+ - 140: 3c <
+ - 141: 2f /
+ - 142: 72 r
+ - 143: 65 e
+ - 144: 71 q
+ - 145: 75 u
+ - 146: 69 i
+ - 147: 72 r
+ - 148: 65 e
+ - 149: 6d m
+ - 150: 65 e
+ - 151: 6e n
+ - 152: 74 t
+ - 153: 3e >
+ - 154: d  
+ - 155: a  
+ - 156: 20  
+ - 157: 20  
+ - 158: 20  
+ - 159: 20  
+ - 160: 20  
+ - 161: 20  
+ - 162: 3c <
+ - 163: 2f /
+ - 164: 72 r
+ - 165: 65 e
+ - 166: 71 q
+ - 167: 75 u
+ - 168: 69 i
+ - 169: 72 r
+ - 170: 65 e
+ - 171: 6d m
+ - 172: 65 e
+ - 173: 6e n
+ - 174: 74 t
+ - 175: 73 s
+ - 176: 3e >
+ - 177: d  
+ - 178: a  
+ - 179: 20  
+ - 180: 20  
+ - 181: 20  
+ - 182: 20  
+ - 183: 3c <
+ - 184: 2f /
+ - 185: 63 c
+ - 186: 6f o
+ - 187: 6d m
+ - 188: 70 p
+ - 189: 6f o
+ - 190: 6e n
+ - 191: 65 e
+ - 192: 6e n
+ - 193: 74 t
+ - 194: 3e >
+ - 195: d  
+ - 196: a  
+ - 197: 20  
+ - 198: 20  
+ - 199: 20  
+ - 200: 20  
+ - 201: 3c <
+ - 202: 63 c
+ - 203: 6f o
+ - 204: 6d m
+ - 205: 70 p
+ - 206: 6f o
+ - 207: 6e n
+ - 208: 65 e
+ - 209: 6e n
+ - 210: 74 t
+ - 211: 3e >
+ - 212: d  
+ - 213: a  
+ - 214: 20  
+ - 215: 20  
+ - 216: 20  
+ - 217: 20  
+ - 218: 20  
+ - 219: 20  
+ - 220: 3c <
+ - 221: 72 r
+ - 222: 6f o
+ - 223: 6c l
+ - 224: 65 e
+ - 225: 3e >
+ - 226: 6f o
+ - 227: 72 r
+ - 228: 67 g
+ - 229: 2e .
+ - 230: 61 a
+ - 231: 70 p
+ - 232: 61 a
+ - 233: 63 c
+ - 234: 68 h
+ - 235: 65 e
+ - 236: 2e .
+ - 237: 6d m
+ - 238: 61 a
+ - 239: 76 v
+ - 240: 65 e
+ - 241: 6e n
+ - 242: 2e .
+ - 243: 70 p
+ - 244: 72 r
+ - 245: 6f o
+ - 246: 66 f
+ - 247: 69 i
+ - 248: 6c l
+ - 249: 65 e
+ - 250: 73 s
+ - 251: 2e .
+ - 252: 4d M
+ - 253: 61 a
+ - 254: 76 v
+ - 255: 65 e
+ - <7936 more elements, increase MaxElementPrintSize to print>
+RCX=0x0000000000002000 is an unknown value
+RDX=0x000101e84624d610 is an unknown value
+RSP=0x000000c74d7fd5e0 is pointing into the stack for thread: 0x000001e865355130
+RBP=0x000000c74d7fdb38 is pointing into the stack for thread: 0x000001e865355130
+RSI=0x000000008b473578 is an oop: [C 
+{0x000000008b473578} - klass: {type array char}
+ - length: 2
+ -   0: 20  
+ -   1: 20  
+RDI=0x0000000000000020 is an unknown value
+R8 =0x000001e84624d610 is pointing into metadata
+R9 =0x0000000000000328 is an unknown value
+R10=0x0000000000000001 is an unknown value
+R11=0x0000000000000002 is an unknown value
+R12=0x0 is null
+R13=0x0000000000000e73 is an unknown value
+R14=0x000000008c70c238 is an oop: java.lang.System$2 
+{0x000000008c70c238} - klass: 'java/lang/System$2'
+ - ---- fields (total size 2 words):
+R15=0x000001e865355130 is a thread
+
+Top of Stack: (sp=0x000000c74d7fd5e0)
+0x000000c74d7fd5e0:   0000000000000000 0000000000000000
+0x000000c74d7fd5f0:   000000c74d7fd848 000001e87005c70c
+0x000000c74d7fd600:   0000826b276a40cf 0000000000000000
+0x000000c74d7fd610:   0000000000000000 0000000000000000
+0x000000c74d7fd620:   000000008b5a2b60 0000000000000000
+0x000000c74d7fd630:   0000000000002000 000001e865355130
+0x000000c74d7fd640:   000000c74d7fd830 000001e86ff82454
+0x000000c74d7fd650:   000001e865355130 000000c74d7fd5b8
+0x000000c74d7fd660:   000001e86ff89cc4 0000000000000000
+0x000000c74d7fd670:   000000008c70a4d8 000000008c70a4d8
+0x000000c74d7fd680:   00000000000004ba 000000008c70a4d8
+0x000000c74d7fd690:   0000000000002e51 000001e8460e38c0
+0x000000c74d7fd6a0:   0000000200000000 000000008b473578
+0x000000c74d7fd6b0:   000000008c70c238 0000200000000000
+0x000000c74d7fd6c0:   000000008b5a2b60 000000008b5a2b28
+0x000000c74d7fd6d0:   000000008b473590 0000000000000002
+0x000000c74d7fd6e0:   000000c74d7fd830 000001e800000002
+0x000000c74d7fd6f0:   000001e87740889a 0000000000002000
+0x000000c74d7fd700:   00000000ffffffff 000000008b5a2b28
+0x000000c74d7fd710:   fffffffffffffff7 00000000ffffffff
+0x000000c74d7fd720:   000000008b5a2b28 fffffffffffffff7
+0x000000c74d7fd730:   000001e80576e2a8 0000000000000002
+0x000000c74d7fd740:   000001e8051a2920 000001e84624b720
+0x000000c74d7fd750:   000000c74d7fdb38 000001e87005f6ec
+0x000000c74d7fd760:   0000000000000000 000000c74d7fd780
+0x000000c74d7fd770:   0000000000000000 0000000000002000
+0x000000c74d7fd780:   fffffffffffffff7 000001e80576e938
+0x000000c74d7fd790:   0000000000000003 000001e8051a2920
+0x000000c74d7fd7a0:   000000c74d7fdb38 000001e87005e13c
+0x000000c74d7fd7b0:   000001e8051a31c8 0000000000000000
+0x000000c74d7fd7c0:   000000c74d7fd7e0 000000c74d7fd830
+0x000000c74d7fd7d0:   000001e877408848 0000000000002000 
+
+Instructions: (pc=0x000001e870062fb4)
+0x000001e870062eb4:   27 00 00 4c 8b 8c 24 f0 00 00 00 48 ba b0 bc 24
+0x000001e870062ec4:   46 e8 01 00 00 48 83 82 18 01 00 00 01 48 ba 40
+0x000001e870062ed4:   be 24 46 e8 01 00 00 8b b2 cc 00 00 00 83 c6 02
+0x000001e870062ee4:   89 b2 cc 00 00 00 81 e6 fe ff 1f 00 85 f6 0f 84
+0x000001e870062ef4:   68 27 00 00 4c 8b 8c 24 f0 00 00 00 48 ba 40 be
+0x000001e870062f04:   24 46 e8 01 00 00 48 83 82 18 01 00 00 01 48 8b
+0x000001e870062f14:   94 24 f0 00 00 00 0f 1f 44 00 00 e8 bc bc 3e 07
+0x000001e870062f24:   0f 1f 84 00 1c 26 00 10 48 ba a8 e3 24 46 e8 01
+0x000001e870062f34:   00 00 ff 82 38 01 00 00 8b 8c 24 18 01 00 00 83
+0x000001e870062f44:   f9 02 48 ba a8 e3 24 46 e8 01 00 00 be 48 01 00
+0x000001e870062f54:   00 7d 05 be 58 01 00 00 48 8b 3c 32 48 8d 7f 01
+0x000001e870062f64:   48 89 3c 32 0f 8d 1f 00 00 00 48 ba a8 e3 24 46
+0x000001e870062f74:   e8 01 00 00 ff 82 68 01 00 00 48 be e0 56 61 8c
+0x000001e870062f84:   00 00 00 00 e9 b0 08 00 00 48 be f8 56 61 8c 00
+0x000001e870062f94:   00 00 00 e9 a1 08 00 00 89 84 24 08 01 00 00 89
+0x000001e870062fa4:   94 24 f8 00 00 00 48 ba 10 d6 24 46 e8 01 01 00
+0x000001e870062fb4:   48 83 82 38 03 00 00 01 48 ba a8 e3 24 46 e8 01
+0x000001e870062fc4:   00 00 8b b2 cc 00 00 00 83 c6 02 89 b2 cc 00 00
+0x000001e870062fd4:   00 81 e6 fe ff 1f 00 85 f6 0f 84 9e 26 00 00 48
+0x000001e870062fe4:   ba a8 e3 24 46 e8 01 00 00 48 83 82 18 01 00 00
+0x000001e870062ff4:   01 48 ba 90 e5 24 46 e8 01 00 00 8b b2 cc 00 00
+0x000001e870063004:   00 83 c6 02 89 b2 cc 00 00 00 81 e6 fe ff 1f 00
+0x000001e870063014:   85 f6 0f 84 86 26 00 00 4c 8b 84 24 e8 00 00 00
+0x000001e870063024:   48 ba 90 e5 24 46 e8 01 00 00 45 8b 40 08 49 ba
+0x000001e870063034:   00 00 00 05 e8 01 00 00 4d 03 c2 4c 3b 82 20 01
+0x000001e870063044:   00 00 75 0d 48 83 82 28 01 00 00 01 e9 60 00 00
+0x000001e870063054:   00 4c 3b 82 30 01 00 00 75 0d 48 83 82 38 01 00
+0x000001e870063064:   00 01 e9 4a 00 00 00 48 83 ba 20 01 00 00 00 75
+0x000001e870063074:   17 4c 89 82 20 01 00 00 48 c7 82 28 01 00 00 01
+0x000001e870063084:   00 00 00 e9 29 00 00 00 48 83 ba 30 01 00 00 00
+0x000001e870063094:   75 17 4c 89 82 30 01 00 00 48 c7 82 38 01 00 00
+0x000001e8700630a4:   01 00 00 00 e9 08 00 00 00 48 83 82 18 01 00 00 
+
+
+Stack slot to memory mapping:
+
+stack at sp + 0 slots: 0x0 is null
+stack at sp + 1 slots: 0x0 is null
+stack at sp + 2 slots: 0x000000c74d7fd848 is pointing into the stack for thread: 0x000001e865355130
+stack at sp + 3 slots: 0x000001e87005c70c is at entry_point+90 in (nmethod*)0x000001e87005c588
+Compiled method (c1) 501 1146       2       java.nio.CharBuffer::position (6 bytes)
+ total in heap  [0x000001e87005c588,0x000001e87005c7e0] = 600
+ relocation     [0x000001e87005c660,0x000001e87005c698] = 56
+ main code      [0x000001e87005c6a0,0x000001e87005c788] = 232
+ stub code      [0x000001e87005c788,0x000001e87005c7d0] = 72
+ metadata       [0x000001e87005c7d0,0x000001e87005c7e0] = 16
+ immutable data [0x000001e84a857f60,0x000001e84a857fd0] = 112
+ dependencies   [0x000001e84a857f60,0x000001e84a857f68] = 8
+ scopes pcs     [0x000001e84a857f68,0x000001e84a857fa8] = 64
+ scopes data    [0x000001e84a857fa8,0x000001e84a857fd0] = 40
+stack at sp + 4 slots: 0x0000826b276a40cf is an unknown value
+stack at sp + 5 slots: 0x0 is null
+stack at sp + 6 slots: 0x0 is null
+stack at sp + 7 slots: 0x0 is null
+
+Lock stack of current Java thread (top to bottom):
+
+
+Compiled method (c1) 503 1165       3       sun.nio.cs.UTF_8$Decoder::decodeArrayLoop (688 bytes)
+ total in heap  [0x000001e870060908,0x000001e870066100] = 22520
+ relocation     [0x000001e8700609e0,0x000001e870061110] = 1840
+ main code      [0x000001e870061120,0x000001e870065cb0] = 19344
+ stub code      [0x000001e870065cb0,0x000001e870066040] = 912
+ oops           [0x000001e870066040,0x000001e870066048] = 8
+ metadata       [0x000001e870066048,0x000001e870066100] = 184
+ immutable data [0x000001e84a816cd0,0x000001e84a818360] = 5776
+ dependencies   [0x000001e84a816cd0,0x000001e84a816d00] = 48
+ nul chk table  [0x000001e84a816d00,0x000001e84a816d88] = 136
+ scopes pcs     [0x000001e84a816d88,0x000001e84a8177c8] = 2624
+ scopes data    [0x000001e84a8177c8,0x000001e84a818360] = 2968
+
+[Constant Pool (empty)]
+
+[MachCode]
+[Instructions begin]
+  0x000001e870061120: 6666 660f | 1f84 0000 | 0000 0066 | 6666 9066 | 6690 448b | 5208 443b 
+
+  0x000001e870061138: ;   {runtime_call ic_miss_stub}
+  0x000001e870061138: 5008 0f85 | a0d5 3e07 
+[Verified Entry Point]
+  0x000001e870061140: 8984 2400 | 80ff ff55 | 4881 ec70 | 0100 0090 | 4181 7f20 | 0100 0000 
+
+  0x000001e870061158: ;   {runtime_call StubRoutines (final stubs)}
+  0x000001e870061158: 7405 e801 | 923d 074c | 8984 24e8 | 0000 004c | 898c 24f0 
+
+  0x000001e87006116c: ;   {metadata(method data for {method} {0x000001e84601d1c0} 'decodeArrayLoop' '(Ljava/nio/ByteBuffer;Ljava/nio/CharBuffer;)Ljava/nio/charset/CoderResult;' in 'sun/nio/cs/UTF_8$Decoder')}
+  0x000001e87006116c: 0000 0048 | bf10 d624 | 46e8 0100 | 008b b7cc | 0000 0083 | c602 89b7 | cc00 0000 | 81e6 fe07 
+  0x000001e87006118c: 0000 85f6 | 0f84 8340 | 0000 493b | 0049 8bf8 
+
+  0x000001e87006119c: ;   {metadata(method data for {method} {0x000001e84601d1c0} 'decodeArrayLoop' '(Ljava/nio/ByteBuffer;Ljava/nio/CharBuffer;)Ljava/nio/charset/CoderResult;' in 'sun/nio/cs/UTF_8$Decoder')}
+  0x000001e87006119c: 48be 10d6 | 2446 e801 | 0000 4883 | 8618 0100 
+
+  0x000001e8700611ac: ;   {metadata(method data for {method} {0x000001e8051f2dd8} 'array' '()[B' in 'java/nio/ByteBuffer')}
+  0x000001e8700611ac: 0001 48bf | 90ce 2446 | e801 0000 | 8bb7 cc00 | 0000 83c6 | 0289 b7cc | 0000 0081 | e6fe ff1f 
+  0x000001e8700611cc: 0085 f60f | 846a 4000 | 0041 8b58 | 3048 899c | 24e0 0000 | 0048 85db 
+
+  0x000001e8700611e4: ;   {metadata(method data for {method} {0x000001e8051f2dd8} 'array' '()[B' in 'java/nio/ByteBuffer')}
+  0x000001e8700611e4: 48bf 90ce | 2446 e801 | 0000 be28 | 0100 0074 | 05be 1801 | 0000 488b | 0c37 488d | 4901 4889 
+  0x000001e870061204: 0c37 0f84 | 653f 0000 | 410f be78 
+
+  0x000001e870061210: ;   {metadata(method data for {method} {0x000001e8051f2dd8} 'array' '()[B' in 'java/nio/ByteBuffer')}
+  0x000001e870061210: 2c85 ff48 | be90 ce24 | 46e8 0100 | 00b9 5801 | 0000 7505 | b948 0100 | 0048 8b14 | 0e48 8d52 
+  0x000001e870061230: 0148 8914 | 0e0f 85e6 | 3e00 0049 
+
+  0x000001e87006123c: ;   {metadata(method data for {method} {0x000001e84601d1c0} 'decodeArrayLoop' '(Ljava/nio/ByteBuffer;Ljava/nio/CharBuffer;)Ljava/nio/charset/CoderResult;' in 'sun/nio/cs/UTF_8$Decoder')}
+  0x000001e87006123c: 8bf0 48b9 | 10d6 2446 | e801 0000 | 4883 8148 | 0100 0001 
+
+  0x000001e870061250: ;   {metadata(method data for {method} {0x000001e8051f1410} 'arrayOffset' '()I' in 'java/nio/ByteBuffer')}
+  0x000001e870061250: 48be 40b9 | 2446 e801 | 0000 8b8e | cc00 0000 | 83c1 0289 | 8ecc 0000 | 0081 e1fe | ff1f 0085 
+  0x000001e870061270: c90f 84e9 | 3f00 0048 
+
+  0x000001e870061278: ;   {metadata(method data for {method} {0x000001e8051f1410} 'arrayOffset' '()I' in 'java/nio/ByteBuffer')}
+  0x000001e870061278: 85db 48be | 40b9 2446 | e801 0000 | b928 0100 | 0074 05b9 | 1801 0000 | 488b 140e | 488d 5201 
+  0x000001e870061298: 4889 140e | 0f84 d73d | 0000 85ff 
+
+  0x000001e8700612a4: ;   {metadata(method data for {method} {0x000001e8051f1410} 'arrayOffset' '()I' in 'java/nio/ByteBuffer')}
+  0x000001e8700612a4: 48bf 40b9 | 2446 e801 | 0000 be58 | 0100 0075 | 05be 4801 | 0000 488b | 0c37 488d | 4901 4889 
+  0x000001e8700612c4: 0c37 0f85 | 5d3d 0000 | 418b 7828 
+
+  0x000001e8700612d0: ;   {metadata(method data for {method} {0x000001e84601d1c0} 'decodeArrayLoop' '(Ljava/nio/ByteBuffer;Ljava/nio/CharBuffer;)Ljava/nio/charset/CoderResult;' in 'sun/nio/cs/UTF_8$Decoder')}
+  0x000001e8700612d0: 498b f048 | b910 d624 | 46e8 0100 | 0048 8381 | 7801 0000 | 0141 8b70 | 1803 f789 | b424 d800 
+  0x000001e8700612f0: 0000 498b 
+
+  0x000001e8700612f4: ;   {metadata(method data for {method} {0x000001e84601d1c0} 'decodeArrayLoop' '(Ljava/nio/ByteBuffer;Ljava/nio/CharBuffer;)Ljava/nio/charset/CoderResult;' in 'sun/nio/cs/UTF_8$Decoder')}
+  0x000001e8700612f4: c848 ba10 | d624 46e8 | 0100 0048 | 8382 a801 | 0000 0141 | 8b48 1c03 | cf89 8c24 | dc00 0000 
+  0x000001e870061314: ; implicit exception: dispatches to 0x000001e870065281
+  0x000001e870061314: 493b 0149 
+
+  0x000001e870061318: ;   {metadata(method data for {method} {0x000001e84601d1c0} 'decodeArrayLoop' '(Ljava/nio/ByteBuffer;Ljava/nio/CharBuffer;)Ljava/nio/charset/CoderResult;' in 'sun/nio/cs/UTF_8$Decoder')}
+  0x000001e870061318: 8bf9 48ba | 10d6 2446 | e801 0000 | 4883 82d8 | 0100 0001 
+
+  0x000001e87006132c: ;   {metadata(method data for {method} {0x000001e8051f5478} 'array' '()[C' in 'java/nio/CharBuffer')}
+  0x000001e87006132c: 48bf 58de | 2446 e801 | 0000 8b97 | cc00 0000 | 83c2 0289 | 97cc 0000 | 0081 e2fe | ff1f 0085 
+  0x000001e87006134c: d20f 8433 | 3f00 0041 | 8b41 3048 | 8984 24c8 | 0000 0048 
+
+  0x000001e870061360: ;   {metadata(method data for {method} {0x000001e8051f5478} 'array' '()[C' in 'java/nio/CharBuffer')}
+  0x000001e870061360: 85c0 48bf | 58de 2446 | e801 0000 | ba28 0100 | 0074 05ba | 1801 0000 | 4c8b 1c17 | 4d8d 5b01 
+  0x000001e870061380: 4c89 1c17 | 0f84 f73b | 0000 410f | be79 2c85 
+
+  0x000001e870061390: ;   {metadata(method data for {method} {0x000001e8051f5478} 'array' '()[C' in 'java/nio/CharBuffer')}
+  0x000001e870061390: ff48 ba58 | de24 46e8 | 0100 0041 | bb58 0100 | 0075 0641 | bb48 0100 | 004e 8b2c | 1a4d 8d6d 
+  0x000001e8700613b0: 014e 892c | 1a0f 8576 | 3b00 0049 
+
+  0x000001e8700613bc: ;   {metadata(method data for {method} {0x000001e84601d1c0} 'decodeArrayLoop' '(Ljava/nio/ByteBuffer;Ljava/nio/CharBuffer;)Ljava/nio/charset/CoderResult;' in 'sun/nio/cs/UTF_8$Decoder')}
+  0x000001e8700613bc: 8bd1 49bb | 10d6 2446 | e801 0000 | 4983 8308 | 0200 0001 
+
+  0x000001e8700613d0: ;   {metadata(method data for {method} {0x000001e8051f3d08} 'arrayOffset' '()I' in 'java/nio/CharBuffer')}
+  0x000001e8700613d0: 48ba f8ba | 2446 e801 | 0000 448b | 9acc 0000 | 0041 83c3 | 0244 899a | cc00 0000 | 4181 e3fe 
+  0x000001e8700613f0: ff1f 0045 | 85db 0f84 | ab3e 0000 
+
+  0x000001e8700613fc: ;   {metadata(method data for {method} {0x000001e8051f3d08} 'arrayOffset' '()I' in 'java/nio/CharBuffer')}
+  0x000001e8700613fc: 4885 c048 | baf8 ba24 | 46e8 0100 | 0041 bb28 | 0100 0074 | 0641 bb18 | 0100 004e | 8b2c 1a4d 
+  0x000001e87006141c: 8d6d 014e | 892c 1a0f | 8460 3a00 
+
+  0x000001e870061428: ;   {metadata(method data for {method} {0x000001e8051f3d08} 'arrayOffset' '()I' in 'java/nio/CharBuffer')}
+  0x000001e870061428: 0085 ff48 | bff8 ba24 | 46e8 0100 | 00ba 5801 | 0000 7505 | ba48 0100 | 004c 8b1c | 174d 8d5b 
+  0x000001e870061448: 014c 891c | 170f 85e7 | 3900 0041 | 8b79 2849 
+
+  0x000001e870061458: ;   {metadata(method data for {method} {0x000001e84601d1c0} 'decodeArrayLoop' '(Ljava/nio/ByteBuffer;Ljava/nio/CharBuffer;)Ljava/nio/charset/CoderResult;' in 'sun/nio/cs/UTF_8$Decoder')}
+  0x000001e870061458: 8bd1 49bb | 10d6 2446 | e801 0000 | 4983 8338 | 0200 0001 | 418b 5118 | 03d7 8994 | 24c0 0000 
+  0x000001e870061478: 004d 8bd9 
+
+  0x000001e87006147c: ;   {metadata(method data for {method} {0x000001e84601d1c0} 'decodeArrayLoop' '(Ljava/nio/ByteBuffer;Ljava/nio/CharBuffer;)Ljava/nio/charset/CoderResult;' in 'sun/nio/cs/UTF_8$Decoder')}
+  0x000001e87006147c: 49bd 10d6 | 2446 e801 | 0000 4983 | 8568 0200 | 0001 458b | 591c 4403 | df44 899c | 24c4 0000 
+  0x000001e87006149c: 0048 8bf9 | 2bfe 4d8b | eb44 2bea 
+
+  0x000001e8700614a8: ;   {metadata(method data for {method} {0x000001e84601d1c0} 'decodeArrayLoop' '(Ljava/nio/ByteBuffer;Ljava/nio/CharBuffer;)Ljava/nio/charset/CoderResult;' in 'sun/nio/cs/UTF_8$Decoder')}
+  0x000001e8700614a8: 49be 10d6 | 2446 e801 | 0000 4983 | 8698 0200 
+
+  0x000001e8700614b8: ;   {metadata(method data for {method} {0x000001e80546d258} 'min' '(II)I' in 'java/lang/Math')}
+  0x000001e8700614b8: 0001 48ba | 3825 0246 | e801 0000 | 448b b2cc | 0000 0041 | 83c6 0244 | 89b2 cc00 | 0000 4181 
+  0x000001e8700614d8: e6fe ff1f | 0045 85f6 | 0f84 e23d | 0000 413b 
+
+  0x000001e8700614e8: ;   {metadata(method data for {method} {0x000001e80546d258} 'min' '(II)I' in 'java/lang/Math')}
+  0x000001e8700614e8: fd48 ba38 | 2502 46e8 | 0100 0041 | be18 0100 | 007f 0641 | be28 0100 | 004a 8b04 | 3248 8d40 
+  0x000001e870061508: 014a 8904 | 320f 8f18 
+
+  0x000001e870061510: ;   {metadata(method data for {method} {0x000001e80546d258} 'min' '(II)I' in 'java/lang/Math')}
+  0x000001e870061510: 0000 0048 | ba38 2502 | 46e8 0100 | 00ff 8238 | 0100 0048 | 8bd7 e903 | 0000 0049 | 8bd5 448b 
+  0x000001e870061530: 9c24 c000 | 0000 488b | 8424 c800 
+
+  0x000001e87006153c: ;   {oop(a 'java/lang/System$2'{0x000000008c70c238})}
+  0x000001e87006153c: 0000 49be | 38c2 708c | 0000 0000 | 498b fe4c | 89b4 24d0 
+
+  0x000001e870061550: ;   {metadata(method data for {method} {0x000001e84601d1c0} 'decodeArrayLoop' '(Ljava/nio/ByteBuffer;Ljava/nio/CharBuffer;)Ljava/nio/charset/CoderResult;' in 'sun/nio/cs/UTF_8$Decoder')}
+  0x000001e870061550: 0000 0049 | bd10 d624 | 46e8 0100 | 0049 8385 | b802 0000 | 014c 8bc3 | 4c8b ce48 | 8bf8 498b 
+  0x000001e870061570: f348 8bca | 488b 9424 | d000 0000 
+
+  0x000001e87006157c: ;   {optimized virtual_call}
+  0x000001e87006157c: 6666 90e8 
+
+  0x000001e870061580: ; ImmutableOopMap {[200]=Oop [224]=Oop [232]=Oop [240]=Oop }
+                      ;*invokeinterface decodeASCII {reexecute=0 rethrow=0 return_oop=0}
+                      ; - sun.nio.cs.UTF_8$Decoder::decodeArrayLoop@82 (line 231)
+  0x000001e870061580: 3c51 0000 
+
+  0x000001e870061584: ;   {other}
+  0x000001e870061584: 0f1f 8400 | 7c0c 0000 | 488b d003 | 9424 d800 | 0000 0384 | 24c0 0000 | 0044 8b9c | 24c4 0000 
+  0x000001e8700615a4: 0048 8bb4 | 24c8 0000 | 008b 8c24 | dc00 0000 | 488b 9c24 | e000 0000 | 0f1f 4000 
+
+  0x000001e8700615c0: ;   {metadata(method data for {method} {0x000001e84601d1c0} 'decodeArrayLoop' '(Ljava/nio/ByteBuffer;Ljava/nio/CharBuffer;)Ljava/nio/charset/CoderResult;' in 'sun/nio/cs/UTF_8$Decoder')}
+  0x000001e8700615c0: 3bd1 49b8 | 10d6 2446 | e801 0000 | 41b9 d802 | 0000 7d06 | 41b9 e802 | 0000 4b8b | 3c08 488d 
+  0x000001e8700615e0: 7f01 4b89 | 3c08 0f8d | 0f1e 0000 
+
+  0x000001e8700615ec: ; implicit exception: dispatches to 0x000001e8700652e9
+  0x000001e8700615ec: 3b53 0c0f | 83fe 3c00 | 004c 63c2 | 420f be7c | 0310 85ff 
+
+  0x000001e870061600: ;   {metadata(method data for {method} {0x000001e84601d1c0} 'decodeArrayLoop' '(Ljava/nio/ByteBuffer;Ljava/nio/CharBuffer;)Ljava/nio/charset/CoderResult;' in 'sun/nio/cs/UTF_8$Decoder')}
+  0x000001e870061600: 49b8 10d6 | 2446 e801 | 0000 41b9 | f802 0000 | 7c06 41b9 | 0803 0000 | 4f8b 2c08 | 4d8d 6d01 
+  0x000001e870061620: 4f89 2c08 | 0f8c 5c00 | 0000 413b 
+
+  0x000001e87006162c: ;   {metadata(method data for {method} {0x000001e84601d1c0} 'decodeArrayLoop' '(Ljava/nio/ByteBuffer;Ljava/nio/CharBuffer;)Ljava/nio/charset/CoderResult;' in 'sun/nio/cs/UTF_8$Decoder')}
+  0x000001e87006162c: c349 b810 | d624 46e8 | 0100 0041 | b928 0300 | 007d 0641 | b918 0300 | 004f 8b2c | 084d 8d6d 
+  0x000001e87006164c: 014f 892c | 080f 8d45 | 1900 004c | 8bc0 41ff | c03b 460c | 0f83 a53c | 0000 4863 | c066 897c 
+  0x000001e87006166c: 4610 ffc2 
+
+  0x000001e870061670: ;   {metadata(method data for {method} {0x000001e84601d1c0} 'decodeArrayLoop' '(Ljava/nio/ByteBuffer;Ljava/nio/CharBuffer;)Ljava/nio/charset/CoderResult;' in 'sun/nio/cs/UTF_8$Decoder')}
+  0x000001e870061670: 49b9 10d6 | 2446 e801 | 0000 41ff | 8148 0300 | 00e9 5108 | 0000 4c8b | c741 c1f8 | 0541 83f8 
+  0x000001e870061690: ;   {metadata(method data for {method} {0x000001e84601d1c0} 'decodeArrayLoop' '(Ljava/nio/ByteBuffer;Ljava/nio/CharBuffer;)Ljava/nio/charset/CoderResult;' in 'sun/nio/cs/UTF_8$Decoder')}
+  0x000001e870061690: fe49 b810 | d624 46e8 | 0100 0041 | b960 0300 | 0075 0641 | b970 0300 | 004f 8b2c | 084d 8d6d 
+  0x000001e8700616b0: 014f 892c | 080f 8534 | 0000 004c | 8bc7 4183 | e01e 4585 
+
+  0x000001e8700616c4: ;   {metadata(method data for {method} {0x000001e84601d1c0} 'decodeArrayLoop' '(Ljava/nio/ByteBuffer;Ljava/nio/CharBuffer;)Ljava/nio/charset/CoderResult;' in 'sun/nio/cs/UTF_8$Decoder')}
+  0x000001e8700616c4: c049 b810 | d624 46e8 | 0100 0041 | b990 0300 | 0075 0641 | b980 0300 | 004f 8b2c | 084d 8d6d 
+  0x000001e8700616e4: 014f 892c | 080f 854e | 0600 004c | 8bc7 41c1 | f804 4183 
+
+  0x000001e8700616f8: ;   {metadata(method data for {method} {0x000001e84601d1c0} 'decodeArrayLoop' '(Ljava/nio/ByteBuffer;Ljava/nio/CharBuffer;)Ljava/nio/charset/CoderResult;' in 'sun/nio/cs/UTF_8$Decoder')}
+  0x000001e8700616f8: f8fe 49b8 | 10d6 2446 | e801 0000 | 41b9 4804 | 0000 7506 | 41b9 5804 | 0000 4f8b | 2c08 4d8d 
+  0x000001e870061718: 6d01 4f89 | 2c08 0f85 | 8602 0000 | 4c8b c144 | 2bc2 4183 
+
+  0x000001e87006172c: ;   {metadata(method data for {method} {0x000001e84601d1c0} 'decodeArrayLoop' '(Ljava/nio/ByteBuffer;Ljava/nio/CharBuffer;)Ljava/nio/charset/CoderResult;' in 'sun/nio/cs/UTF_8$Decoder')}
+  0x000001e87006172c: f803 49b9 | 10d6 2446 | e801 0000 | 41bd 6804 | 0000 7c06 | 41bd 7804 | 0000 4f8b | 3429 4d8d 
+  0x000001e87006174c: 7601 4f89 | 3429 0f8c | d607 0000 
+
+  0x000001e870061758: ;   {metadata(method data for {method} {0x000001e84601d1c0} 'decodeArrayLoop' '(Ljava/nio/ByteBuffer;Ljava/nio/CharBuffer;)Ljava/nio/charset/CoderResult;' in 'sun/nio/cs/UTF_8$Decoder')}
+  0x000001e870061758: 413b c349 | b910 d624 | 46e8 0100 | 0041 bd98 | 0400 007d | 0641 bd88 | 0400 004f | 8b34 294d 
+  0x000001e870061778: 8d76 014f | 8934 290f | 8da9 0700 | 0089 8424 | 0801 0000 | 4c8b c241 | ffc0 443b | 430c 0f83 
+  0x000001e870061798: 7d3b 0000 | 4d63 c046 | 0fbe 6c03 | 104c 8bc2 | 4183 c002 | 443b 430c | 0f83 713b | 0000 4d63 
+  0x000001e8700617b8: c046 0fbe 
+
+  0x000001e8700617bc: ;   {metadata(method data for {method} {0x000001e84601d1c0} 'decodeArrayLoop' '(Ljava/nio/ByteBuffer;Ljava/nio/CharBuffer;)Ljava/nio/charset/CoderResult;' in 'sun/nio/cs/UTF_8$Decoder')}
+  0x000001e8700617bc: 7403 1049 | b810 d624 | 46e8 0100 | 0049 8380 | 1805 0000 | 0189 9424 | f800 0000 | 488b d74d 
+  0x000001e8700617dc: 8bc5 4d8b | ce44 89b4 | 2404 0100 | 0044 89ac | 2400 0100 | 0089 bc24 | fc00 0000 | 0f1f 8000 
+  0x000001e8700617fc: ;   {static_call}
+  0x000001e8700617fc: 0000 00e8 
+
+  0x000001e870061800: ; ImmutableOopMap {[200]=Oop [224]=Oop [232]=Oop [240]=Oop }
+                      ;*invokestatic isMalformed3 {reexecute=0 rethrow=0 return_oop=0}
+                      ; - sun.nio.cs.UTF_8$Decoder::decodeArrayLoop@353 (line 272)
+  0x000001e870061800: dcdd 3e07 
+
+  0x000001e870061804: ;   {other}
+  0x000001e870061804: 0f1f 8400 | fc0e 0001 
+
+  0x000001e87006180c: ;   {metadata(method data for {method} {0x000001e84601d1c0} 'decodeArrayLoop' '(Ljava/nio/ByteBuffer;Ljava/nio/CharBuffer;)Ljava/nio/charset/CoderResult;' in 'sun/nio/cs/UTF_8$Decoder')}
+  0x000001e87006180c: 85c0 48ba | 10d6 2446 | e801 0000 | 41b8 3805 | 0000 7506 | 41b8 2805 | 0000 4e8b | 0c02 4d8d 
+  0x000001e87006182c: 4901 4e89 | 0c02 0f85 | a235 0000 | 448b b424 | 0401 0000 | 448b ac24 | 0001 0000 | 8bbc 24fc 
+  0x000001e87006184c: 0000 00c1 | e70c 41c1 | e506 4933 | fd41 81f6 | 801f feff | 4933 fe81 | e7ff ff00 
+
+  0x000001e870061868: ;   {metadata(method data for {method} {0x000001e84601d1c0} 'decodeArrayLoop' '(Ljava/nio/ByteBuffer;Ljava/nio/CharBuffer;)Ljava/nio/charset/CoderResult;' in 'sun/nio/cs/UTF_8$Decoder')}
+  0x000001e870061868: 0048 ba10 | d624 46e8 | 0100 0048 | 8382 5805 
+
+  0x000001e870061878: ;   {metadata(method data for {method} {0x000001e805469cb0} 'isSurrogate' '(C)Z' in 'java/lang/Character')}
+  0x000001e870061878: 0000 0148 | bae0 3025 | 46e8 0100 | 0044 8b82 | cc00 0000 | 4183 c002 | 4489 82cc | 0000 0041 
+  0x000001e870061898: 81e0 feff | 1f00 4585 | c00f 848e | 3a00 0081 | ff00 d800 
+
+  0x000001e8700618ac: ;   {metadata(method data for {method} {0x000001e805469cb0} 'isSurrogate' '(C)Z' in 'java/lang/Character')}
+  0x000001e8700618ac: 0048 bae0 | 3025 46e8 | 0100 0041 | b818 0100 | 007c 0641 | b828 0100 | 004e 8b0c | 024d 8d49 
+  0x000001e8700618cc: 014e 890c | 020f 8c30 | 0000 0081 | ff00 e000 
+
+  0x000001e8700618dc: ;   {metadata(method data for {method} {0x000001e805469cb0} 'isSurrogate' '(C)Z' in 'java/lang/Character')}
+  0x000001e8700618dc: 0048 bae0 | 3025 46e8 | 0100 0041 | b848 0100 | 007c 0641 | b838 0100 | 004e 8b0c | 024d 8d49 
+  0x000001e8700618fc: 014e 890c | 020f 8c0a | 0000 00ba | 0000 0000 | e915 0000 
+
+  0x000001e870061910: ;   {metadata(method data for {method} {0x000001e805469cb0} 'isSurrogate' '(C)Z' in 'java/lang/Character')}
+  0x000001e870061910: 0048 bae0 | 3025 46e8 | 0100 00ff | 8258 0100 | 00ba 0100 | 0000 83e2 
+
+  0x000001e870061928: ;   {metadata(method data for {method} {0x000001e84601d1c0} 'decodeArrayLoop' '(Ljava/nio/ByteBuffer;Ljava/nio/CharBuffer;)Ljava/nio/charset/CoderResult;' in 'sun/nio/cs/UTF_8$Decoder')}
+  0x000001e870061928: 0185 d248 | ba10 d624 | 46e8 0100 | 0041 b878 | 0500 0075 | 0641 b868 | 0500 004e | 8b0c 024d 
+  0x000001e870061948: 8d49 014e | 890c 020f | 856d 3000 | 008b 8424 | 0801 0000 | 488b b424 | c800 0000 | 488b d0ff 
+  0x000001e870061968: c23b 460c | 0f83 ee39 | 0000 4863 | c066 897c | 4610 448b | 8c24 f800 | 0000 4183 
+
+  0x000001e870061984: ;   {metadata(method data for {method} {0x000001e84601d1c0} 'decodeArrayLoop' '(Ljava/nio/ByteBuffer;Ljava/nio/CharBuffer;)Ljava/nio/charset/CoderResult;' in 'sun/nio/cs/UTF_8$Decoder')}
+  0x000001e870061984: c103 49b8 | 10d6 2446 | e801 0000 | 41ff 8098 | 0500 004c | 8bc2 498b | d148 8b9c | 24e0 0000 
+  0x000001e8700619a4: 00e9 2d05 | 0000 89bc | 24fc 0000 | 0089 9424 | f800 0000 | 8bbc 24fc | 0000 00c1 | ff03 83ff 
+  0x000001e8700619c4: ;   {metadata(method data for {method} {0x000001e84601d1c0} 'decodeArrayLoop' '(Ljava/nio/ByteBuffer;Ljava/nio/CharBuffer;)Ljava/nio/charset/CoderResult;' in 'sun/nio/cs/UTF_8$Decoder')}
+  0x000001e8700619c4: fe48 ba10 | d624 46e8 | 0100 0041 | b8b0 0500 | 0075 0641 | b8c0 0500 | 004e 8b0c | 024d 8d49 
+  0x000001e8700619e4: 014e 890c | 020f 8573 | 2f00 008b | 8c24 dc00 | 0000 2b8c | 24f8 0000 | 0089 8c24 | 1401 0000 
+  0x000001e870061a04: ;   {metadata(method data for {method} {0x000001e84601d1c0} 'decodeArrayLoop' '(Ljava/nio/ByteBuffer;Ljava/nio/CharBuffer;)Ljava/nio/charset/CoderResult;' in 'sun/nio/cs/UTF_8$Decoder')}
+  0x000001e870061a04: 83f9 0448 | ba10 d624 | 46e8 0100 | 0041 b8d0 | 0500 007c | 0641 b8e0 | 0500 004e | 8b0c 024d 
+  0x000001e870061a24: 8d49 014e | 890c 020f | 8ccf 0a00 | 0044 8b9c | 24c4 0000 | 0044 2bd8 | 4183 fb02 
+
+  0x000001e870061a40: ;   {metadata(method data for {method} {0x000001e84601d1c0} 'decodeArrayLoop' '(Ljava/nio/ByteBuffer;Ljava/nio/CharBuffer;)Ljava/nio/charset/CoderResult;' in 'sun/nio/cs/UTF_8$Decoder')}
+  0x000001e870061a40: 48ba 10d6 | 2446 e801 | 0000 41b8 | 0006 0000 | 7c06 41b8 | f005 0000 | 4e8b 0c02 | 4d8d 4901 
+  0x000001e870061a60: 4e89 0c02 | 0f8c 960a | 0000 8984 | 2408 0100 | 0048 8b9c | 24e0 0000 | 008b 9424 | f800 0000 
+  0x000001e870061a80: ffc2 3b53 | 0c0f 83e3 | 3800 0048 | 63d2 0fbe | 5413 1044 | 8b84 24f8 | 0000 0041 | 83c0 0244 
+  0x000001e870061aa0: 3b43 0c0f | 83d3 3800 | 004d 63c0 | 460f be44 | 0310 448b | 8c24 f800 | 0000 4183 | c103 443b 
+  0x000001e870061ac0: 4b0c 0f83 | c238 0000 | 4d63 c946 | 0fbe 4c0b | 108b bc24 | fc00 0000 | c1e7 1248 | 8bca c1e1 
+  0x000001e870061ae0: 0c48 33f9 | 498b c8c1 | e106 4833 | f949 8bc9 | 81f1 801f | 3800 4833 
+
+  0x000001e870061af8: ;   {metadata(method data for {method} {0x000001e84601d1c0} 'decodeArrayLoop' '(Ljava/nio/ByteBuffer;Ljava/nio/CharBuffer;)Ljava/nio/charset/CoderResult;' in 'sun/nio/cs/UTF_8$Decoder')}
+  0x000001e870061af8: f948 b910 | d624 46e8 | 0100 0048 | 8381 0007 | 0000 0189 | bc24 0c01 | 0000 0f1f 
+
+  0x000001e870061b14: ;   {static_call}
+  0x000001e870061b14: 4400 00e8 
+
+  0x000001e870061b18: ; ImmutableOopMap {[200]=Oop [224]=Oop [232]=Oop [240]=Oop }
+                      ;*invokestatic isMalformed4 {reexecute=0 rethrow=0 return_oop=0}
+                      ; - sun.nio.cs.UTF_8$Decoder::decodeArrayLoop@604 (line 308)
+  0x000001e870061b18: c4da 3e07 
+
+  0x000001e870061b1c: ;   {other}
+  0x000001e870061b1c: 0f1f 8400 | 1412 0002 
+
+  0x000001e870061b24: ;   {metadata(method data for {method} {0x000001e84601d1c0} 'decodeArrayLoop' '(Ljava/nio/ByteBuffer;Ljava/nio/CharBuffer;)Ljava/nio/charset/CoderResult;' in 'sun/nio/cs/UTF_8$Decoder')}
+  0x000001e870061b24: 85c0 48ba | 10d6 2446 | e801 0000 | be10 0700 | 0075 05be | 2007 0000 | 488b 3c32 | 488d 7f01 
+  0x000001e870061b44: 4889 3c32 | 0f85 9429 | 0000 8bbc | 240c 0100 
+
+  0x000001e870061b54: ;   {metadata(method data for {method} {0x000001e84601d1c0} 'decodeArrayLoop' '(Ljava/nio/ByteBuffer;Ljava/nio/CharBuffer;)Ljava/nio/charset/CoderResult;' in 'sun/nio/cs/UTF_8$Decoder')}
+  0x000001e870061b54: 0048 ba10 | d624 46e8 | 0100 0048 | 8382 3007 
+
+  0x000001e870061b64: ;   {metadata(method data for {method} {0x000001e805469c58} 'isSupplementaryCodePoint' '(I)Z' in 'java/lang/Character')}
+  0x000001e870061b64: 0000 0148 | bae0 3525 | 46e8 0100 | 008b b2cc | 0000 0083 | c602 89b2 | cc00 0000 | 81e6 feff 
+  0x000001e870061b84: 1f00 85f6 | 0f84 0a38 | 0000 81ff | 0000 0100 
+
+  0x000001e870061b94: ;   {metadata(method data for {method} {0x000001e805469c58} 'isSupplementaryCodePoint' '(I)Z' in 'java/lang/Character')}
+  0x000001e870061b94: 48ba e035 | 2546 e801 | 0000 be18 | 0100 007c | 05be 2801 | 0000 488b | 1c32 488d | 5b01 4889 
+  0x000001e870061bb4: 1c32 0f8c | 2e00 0000 | 81ff 0000 
+
+  0x000001e870061bc0: ;   {metadata(method data for {method} {0x000001e805469c58} 'isSupplementaryCodePoint' '(I)Z' in 'java/lang/Character')}
+  0x000001e870061bc0: 1100 48ba | e035 2546 | e801 0000 | be48 0100 | 007c 05be | 3801 0000 | 488b 1c32 | 488d 5b01 
+  0x000001e870061be0: 4889 1c32 | 0f8c 0a00 | 0000 ba00 | 0000 00e9 | 1500 0000 
+
+  0x000001e870061bf4: ;   {metadata(method data for {method} {0x000001e805469c58} 'isSupplementaryCodePoint' '(I)Z' in 'java/lang/Character')}
+  0x000001e870061bf4: 48ba e035 | 2546 e801 | 0000 ff82 | 5801 0000 | ba01 0000 | 0083 e201 
+
+  0x000001e870061c0c: ;   {metadata(method data for {method} {0x000001e84601d1c0} 'decodeArrayLoop' '(Ljava/nio/ByteBuffer;Ljava/nio/CharBuffer;)Ljava/nio/charset/CoderResult;' in 'sun/nio/cs/UTF_8$Decoder')}
+  0x000001e870061c0c: 85d2 48ba | 10d6 2446 | e801 0000 | be50 0700 | 0074 05be | 4007 0000 | 488b 1c32 | 488d 5b01 
+  0x000001e870061c2c: 4889 1c32 | 0f84 ac28 | 0000 8b84 | 2408 0100 | 0048 8bb4 | 24c8 0000 
+
+  0x000001e870061c44: ;   {metadata(method data for {method} {0x000001e84601d1c0} 'decodeArrayLoop' '(Ljava/nio/ByteBuffer;Ljava/nio/CharBuffer;)Ljava/nio/charset/CoderResult;' in 'sun/nio/cs/UTF_8$Decoder')}
+  0x000001e870061c44: 0048 ba10 | d624 46e8 | 0100 0048 | 8382 7007 | 0000 0148 | 8bd0 ffc2 
+
+  0x000001e870061c5c: ;   {metadata(method data for {method} {0x000001e805469c00} 'highSurrogate' '(I)C' in 'java/lang/Character')}
+  0x000001e870061c5c: 48bb 7837 | 2546 e801 | 0000 8b8b | cc00 0000 | 83c1 0289 | 8bcc 0000 | 0081 e1fe | ff1f 0085 
+  0x000001e870061c7c: c90f 8436 | 3700 0048 | 8bdf c1eb | 0a81 c3c0 | d700 0081 | e3ff ff00 | 0081 e3ff | ff00 003b 
+  0x000001e870061c9c: 460c 0f83 | 4037 0000 | 4863 c066 | 895c 4610 | 488b daff 
+
+  0x000001e870061cb0: ;   {metadata(method data for {method} {0x000001e84601d1c0} 'decodeArrayLoop' '(Ljava/nio/ByteBuffer;Ljava/nio/CharBuffer;)Ljava/nio/charset/CoderResult;' in 'sun/nio/cs/UTF_8$Decoder')}
+  0x000001e870061cb0: c348 b810 | d624 46e8 | 0100 0048 | 8380 8007 
+
+  0x000001e870061cc0: ;   {metadata(method data for {method} {0x000001e805469ba8} 'lowSurrogate' '(I)C' in 'java/lang/Character')}
+  0x000001e870061cc0: 0000 0148 | b8b0 3825 | 46e8 0100 | 008b 88cc | 0000 0083 | c102 8988 | cc00 0000 | 81e1 feff 
+  0x000001e870061ce0: 1f00 85c9 | 0f84 0837 | 0000 81e7 | ff03 0000 | 81c7 00dc | 0000 81e7 | ffff 0000 | 81e7 ffff 
+  0x000001e870061d00: 0000 3b56 | 0c0f 8308 | 3700 0048 | 63d2 6689 | 7c56 108b | 9424 f800 | 0000 83c2 
+
+  0x000001e870061d1c: ;   {metadata(method data for {method} {0x000001e84601d1c0} 'decodeArrayLoop' '(Ljava/nio/ByteBuffer;Ljava/nio/CharBuffer;)Ljava/nio/charset/CoderResult;' in 'sun/nio/cs/UTF_8$Decoder')}
+  0x000001e870061d1c: 0448 bf10 | d624 46e8 | 0100 00ff | 8790 0700 | 004c 8bc3 | 488b 9c24 | e000 0000 | e99a 0100 
+  0x000001e870061d3c: 0089 bc24 | fc00 0000 | 8994 24f8 | 0000 008b | 8c24 dc00 | 0000 2b8c | 24f8 0000 | 0083 f902 
+  0x000001e870061d5c: ;   {metadata(method data for {method} {0x000001e84601d1c0} 'decodeArrayLoop' '(Ljava/nio/ByteBuffer;Ljava/nio/CharBuffer;)Ljava/nio/charset/CoderResult;' in 'sun/nio/cs/UTF_8$Decoder')}
+  0x000001e870061d5c: 48ba 10d6 | 2446 e801 | 0000 bfa0 | 0300 007c | 05bf b003 | 0000 488b | 1c3a 488d | 5b01 4889 
+  0x000001e870061d7c: 1c3a 0f8c | c00d 0000 | 3b84 24c4 
+
+  0x000001e870061d88: ;   {metadata(method data for {method} {0x000001e84601d1c0} 'decodeArrayLoop' '(Ljava/nio/ByteBuffer;Ljava/nio/CharBuffer;)Ljava/nio/charset/CoderResult;' in 'sun/nio/cs/UTF_8$Decoder')}
+  0x000001e870061d88: 0000 0048 | ba10 d624 | 46e8 0100 | 00bf d003 | 0000 7d05 | bfc0 0300 | 0048 8b1c | 3a48 8d5b 
+  0x000001e870061da8: 0148 891c | 3a0f 8d91 | 0d00 0048 | 8b9c 24e0 | 0000 008b | 9424 f800 | 0000 ffc2 | 3b53 0c0f 
+  0x000001e870061dc8: 8354 3600 | 0048 63d2 | 0fbe 5413 
+
+  0x000001e870061dd4: ;   {metadata(method data for {method} {0x000001e84601d1c0} 'decodeArrayLoop' '(Ljava/nio/ByteBuffer;Ljava/nio/CharBuffer;)Ljava/nio/charset/CoderResult;' in 'sun/nio/cs/UTF_8$Decoder')}
+  0x000001e870061dd4: 1048 bf10 | d624 46e8 | 0100 0048 | 8387 f003 
+
+  0x000001e870061de4: ;   {metadata(method data for {method} {0x000001e84601c100} 'isNotContinuation' '(I)Z' in 'sun/nio/cs/UTF_8$Decoder')}
+  0x000001e870061de4: 0000 0148 | bf10 2a25 | 46e8 0100 | 008b 8fcc | 0000 0083 | c102 898f | cc00 0000 | 81e1 feff 
+  0x000001e870061e04: 1f00 85c9 | 0f84 2136 | 0000 488b | fa81 e7c0 | 0000 0081 | ff80 0000 
+
+  0x000001e870061e1c: ;   {metadata(method data for {method} {0x000001e84601c100} 'isNotContinuation' '(I)Z' in 'sun/nio/cs/UTF_8$Decoder')}
+  0x000001e870061e1c: 0048 bf10 | 2a25 46e8 | 0100 00b9 | 1801 0000 | 7405 b928 | 0100 004c | 8b04 0f4d | 8d40 014c 
+  0x000001e870061e3c: 8904 0f0f | 841a 0000 
+
+  0x000001e870061e44: ;   {metadata(method data for {method} {0x000001e84601c100} 'isNotContinuation' '(I)Z' in 'sun/nio/cs/UTF_8$Decoder')}
+  0x000001e870061e44: 0048 bf10 | 2a25 46e8 | 0100 00ff | 8738 0100 | 00bf 0100 | 0000 e905 | 0000 00bf | 0000 0000 
+  0x000001e870061e64: 83e7 0185 
+
+  0x000001e870061e68: ;   {metadata(method data for {method} {0x000001e84601d1c0} 'decodeArrayLoop' '(Ljava/nio/ByteBuffer;Ljava/nio/CharBuffer;)Ljava/nio/charset/CoderResult;' in 'sun/nio/cs/UTF_8$Decoder')}
+  0x000001e870061e68: ff48 bf10 | d624 46e8 | 0100 00b9 | 1004 0000 | 7505 b900 | 0400 004c | 8b04 0f4d | 8d40 014c 
+  0x000001e870061e88: 8904 0f0f | 85b1 2600 | 0048 8bf8 | ffc7 8b8c | 24fc 0000 | 00c1 e106 | 4833 ca81 | f180 0f00 
+  0x000001e870061ea8: 003b 460c | 0f83 a835 | 0000 4863 | c066 894c | 4610 8b94 | 24f8 0000 | 0083 c202 
+
+  0x000001e870061ec4: ;   {metadata(method data for {method} {0x000001e84601d1c0} 'decodeArrayLoop' '(Ljava/nio/ByteBuffer;Ljava/nio/CharBuffer;)Ljava/nio/charset/CoderResult;' in 'sun/nio/cs/UTF_8$Decoder')}
+  0x000001e870061ec4: 48b8 10d6 | 2446 e801 | 0000 ff80 | 3004 0000 
+
+  0x000001e870061ed4: ;   {metadata(method data for {method} {0x000001e84601d1c0} 'decodeArrayLoop' '(Ljava/nio/ByteBuffer;Ljava/nio/CharBuffer;)Ljava/nio/charset/CoderResult;' in 'sun/nio/cs/UTF_8$Decoder')}
+  0x000001e870061ed4: 4c8b c748 | bf10 d624 | 46e8 0100 | 008b 87d0 | 0000 0083 | c002 8987 | d000 0000 | 25fe 3f00 
+  0x000001e870061ef4: 0085 c00f | 846b 3500 | 004d 8b97 
+
+  0x000001e870061f00: ; ImmutableOopMap {rsi=Oop rbx=Oop [200]=Oop [224]=Oop [232]=Oop [240]=Oop }
+                      ;*goto {reexecute=1 rethrow=0 return_oop=0}
+                      ; - (reexecute) sun.nio.cs.UTF_8$Decoder::decodeArrayLoop@672 (line 318)
+  0x000001e870061f00: 5004 0000 
+
+  0x000001e870061f04: ;   {poll}
+  0x000001e870061f04: 4185 0248 | bf10 d624 | 46e8 0100 | 00ff 87b8 | 0700 0049 | 8bc0 448b | 9c24 c400 | 0000 8b8c 
+  0x000001e870061f24: 24dc 0000 | 00e9 92f6 | ffff 89bc | 24fc 0000 | 0041 83f8 
+
+  0x000001e870061f38: ;   {metadata(method data for {method} {0x000001e84601d1c0} 'decodeArrayLoop' '(Ljava/nio/ByteBuffer;Ljava/nio/CharBuffer;)Ljava/nio/charset/CoderResult;' in 'sun/nio/cs/UTF_8$Decoder')}
+  0x000001e870061f38: 0148 be10 | d624 46e8 | 0100 00bf | a804 0000 | 7e05 bfb8 | 0400 0048 | 8b0c 3e48 | 8d49 0148 
+  0x000001e870061f58: 890c 3e0f | 8e38 0100 | 008b bc24 | fc00 0000 | 488b f2ff | c63b 730c | 0f83 1335 | 0000 4863 
+  0x000001e870061f78: f60f be74 
+
+  0x000001e870061f7c: ;   {metadata(method data for {method} {0x000001e84601d1c0} 'decodeArrayLoop' '(Ljava/nio/ByteBuffer;Ljava/nio/CharBuffer;)Ljava/nio/charset/CoderResult;' in 'sun/nio/cs/UTF_8$Decoder')}
+  0x000001e870061f7c: 3310 48bb | 10d6 2446 | e801 0000 | 4883 83c8 | 0400 0001 
+
+  0x000001e870061f90: ;   {metadata(method data for {method} {0x000001e84601c2e0} 'isMalformed3_2' '(II)Z' in 'sun/nio/cs/UTF_8$Decoder')}
+  0x000001e870061f90: 48bb 7832 | 2546 e801 | 0000 8b8b | cc00 0000 | 83c1 0289 | 8bcc 0000 | 0081 e1fe | ff1f 0085 
+  0x000001e870061fb0: c90f 84e0 | 3400 0083 
+
+  0x000001e870061fb8: ;   {metadata(method data for {method} {0x000001e84601c2e0} 'isMalformed3_2' '(II)Z' in 'sun/nio/cs/UTF_8$Decoder')}
+  0x000001e870061fb8: ffe0 48bf | 7832 2546 | e801 0000 | bb18 0100 | 0075 05bb | 2801 0000 | 488b 0c1f | 488d 4901 
+  0x000001e870061fd8: 4889 0c1f | 0f85 3700 | 0000 488b | fe81 e7e0 | 0000 0081 | ff80 0000 
+
+  0x000001e870061ff0: ;   {metadata(method data for {method} {0x000001e84601c2e0} 'isMalformed3_2' '(II)Z' in 'sun/nio/cs/UTF_8$Decoder')}
+  0x000001e870061ff0: 0048 bf78 | 3225 46e8 | 0100 00bb | 3801 0000 | 7405 bb48 | 0100 0048 | 8b0c 1f48 | 8d49 0148 
+  0x000001e870062010: 890c 1f0f | 8434 0000 | 0081 e6c0 | 0000 0081 | fe80 0000 
+
+  0x000001e870062024: ;   {metadata(method data for {method} {0x000001e84601c2e0} 'isMalformed3_2' '(II)Z' in 'sun/nio/cs/UTF_8$Decoder')}
+  0x000001e870062024: 0048 be78 | 3225 46e8 | 0100 00bf | 5801 0000 | 7405 bf68 | 0100 0048 | 8b1c 3e48 | 8d5b 0148 
+  0x000001e870062044: 891c 3e0f | 841a 0000 
+
+  0x000001e87006204c: ;   {metadata(method data for {method} {0x000001e84601c2e0} 'isMalformed3_2' '(II)Z' in 'sun/nio/cs/UTF_8$Decoder')}
+  0x000001e87006204c: 0048 be78 | 3225 46e8 | 0100 00ff | 8678 0100 | 00be 0100 | 0000 e905 | 0000 00be | 0000 0000 
+  0x000001e87006206c: 83e6 0185 
+
+  0x000001e870062070: ;   {metadata(method data for {method} {0x000001e84601d1c0} 'decodeArrayLoop' '(Ljava/nio/ByteBuffer;Ljava/nio/CharBuffer;)Ljava/nio/charset/CoderResult;' in 'sun/nio/cs/UTF_8$Decoder')}
+  0x000001e870062070: f648 be10 | d624 46e8 | 0100 00bf | e804 0000 | 7505 bfd8 | 0400 0048 | 8b1c 3e48 | 8d5b 0148 
+  0x000001e870062090: 891c 3e0f | 8522 2000 | 0044 8984 | 2410 0100 | 0089 8424 | 0801 0000 | 8994 24f8 
+
+  0x000001e8700620ac: ;   {metadata(method data for {method} {0x000001e84601d1c0} 'decodeArrayLoop' '(Ljava/nio/ByteBuffer;Ljava/nio/CharBuffer;)Ljava/nio/charset/CoderResult;' in 'sun/nio/cs/UTF_8$Decoder')}
+  0x000001e8700620ac: 0000 0048 | be10 d624 | 46e8 0100 | 0048 8386 | 0805 0000 
+
+  0x000001e8700620c0: ;   {metadata(method data for {method} {0x000001e84601cc20} 'xflow' '(Ljava/nio/Buffer;IILjava/nio/Buffer;II)Ljava/nio/charset/CoderResult;' in 'sun/nio/cs/UTF_8$Decoder')}
+  0x000001e8700620c0: 0148 bea8 | e324 46e8 | 0100 008b | becc 0000 | 0083 c702 | 89be cc00 | 0000 81e7 | feff 1f00 
+  0x000001e8700620e0: 85ff 0f84 | d033 0000 
+
+  0x000001e8700620e8: ;   {metadata(method data for {method} {0x000001e84601cc20} 'xflow' '(Ljava/nio/Buffer;IILjava/nio/Buffer;II)Ljava/nio/charset/CoderResult;' in 'sun/nio/cs/UTF_8$Decoder')}
+  0x000001e8700620e8: 48be a8e3 | 2446 e801 | 0000 4883 | 8618 0100 
+
+  0x000001e8700620f8: ;   {metadata(method data for {method} {0x000001e8054870b0} 'updatePositions' '(Ljava/nio/Buffer;ILjava/nio/Buffer;I)V' in 'sun/nio/cs/UTF_8')}
+  0x000001e8700620f8: 0001 48be | 90e5 2446 | e801 0000 | 8bbe cc00 | 0000 83c7 | 0289 becc | 0000 0081 | e7fe ff1f 
+  0x000001e870062118: 0085 ff0f | 84b8 3300 | 0048 8bb4 | 24e8 0000 
+
+  0x000001e870062128: ;   {metadata(method data for {method} {0x000001e8054870b0} 'updatePositions' '(Ljava/nio/Buffer;ILjava/nio/Buffer;I)V' in 'sun/nio/cs/UTF_8')}
+  0x000001e870062128: 0048 bf90 | e524 46e8 | 0100 008b | 7608 49ba | 0000 0005 | e801 0000 | 4903 f248 | 3bb7 2001 
+  0x000001e870062148: 0000 750d | 4883 8728 | 0100 0001 | e960 0000 | 0048 3bb7 | 3001 0000 | 750d 4883 | 8738 0100 
+  0x000001e870062168: 0001 e94a | 0000 0048 | 83bf 2001 | 0000 0075 | 1748 89b7 | 2001 0000 | 48c7 8728 | 0100 0001 
+  0x000001e870062188: 0000 00e9 | 2900 0000 | 4883 bf30 | 0100 0000 | 7517 4889 | b730 0100 | 0048 c787 | 3801 0000 
+  0x000001e8700621a8: 0100 0000 | e908 0000 | 0048 8387 | 1801 0000 | 0148 8b94 | 24e8 0000 | 0066 0f1f 
+
+  0x000001e8700621c4: ;   {optimized virtual_call}
+  0x000001e8700621c4: 4400 00e8 
+
+  0x000001e8700621c8: ; ImmutableOopMap {[232]=Oop [240]=Oop }
+                      ;*invokevirtual arrayOffset {reexecute=0 rethrow=0 return_oop=0}
+                      ; - sun.nio.cs.UTF_8::updatePositions@3 (line 82)
+                      ; - sun.nio.cs.UTF_8$Decoder::xflow@5 (line 206)
+                      ; - sun.nio.cs.UTF_8$Decoder::decodeArrayLoop@327 (line 268)
+  0x000001e8700621c8: 14ca 3e07 
+
+  0x000001e8700621cc: ;   {other}
+  0x000001e8700621cc: 0f1f 8400 | c418 0004 | 4c8b 8424 | e800 0000 
+
+  0x000001e8700621dc: ;   {metadata(method data for {method} {0x000001e8054870b0} 'updatePositions' '(Ljava/nio/Buffer;ILjava/nio/Buffer;I)V' in 'sun/nio/cs/UTF_8')}
+  0x000001e8700621dc: 48ba 90e5 | 2446 e801 | 0000 458b | 4008 49ba | 0000 0005 | e801 0000 | 4d03 c24c | 3b82 5001 
+  0x000001e8700621fc: 0000 750d | 4883 8258 | 0100 0001 | e960 0000 | 004c 3b82 | 6001 0000 | 750d 4883 | 8268 0100 
+  0x000001e87006221c: 0001 e94a | 0000 0048 | 83ba 5001 | 0000 0075 | 174c 8982 | 5001 0000 | 48c7 8258 | 0100 0001 
+  0x000001e87006223c: 0000 00e9 | 2900 0000 | 4883 ba60 | 0100 0000 | 7517 4c89 | 8260 0100 | 0048 c782 | 6801 0000 
+  0x000001e87006225c: 0100 0000 | e908 0000 | 0048 8382 | 4801 0000 | 018b 9424 | f800 0000 | 2bd0 4c8b | c248 8b94 
+  0x000001e87006227c: 24e8 0000 | 000f 1f40 | 0048 b820 | 0f38 4ae8 
+
+  0x000001e87006228c: ;   {virtual_call}
+  0x000001e87006228c: 0100 00e8 
+
+  0x000001e870062290: ; ImmutableOopMap {[240]=Oop }
+                      ;*invokevirtual position {reexecute=0 rethrow=0 return_oop=0}
+                      ; - sun.nio.cs.UTF_8::updatePositions@7 (line 82)
+                      ; - sun.nio.cs.UTF_8$Decoder::xflow@5 (line 206)
+                      ; - sun.nio.cs.UTF_8$Decoder::decodeArrayLoop@327 (line 268)
+  0x000001e870062290: 4cce 3e07 
+
+  0x000001e870062294: ;   {other}
+  0x000001e870062294: 0f1f 8400 | 8c19 0005 | 4c8b 8c24 | f000 0000 
+
+  0x000001e8700622a4: ;   {metadata(method data for {method} {0x000001e8054870b0} 'updatePositions' '(Ljava/nio/Buffer;ILjava/nio/Buffer;I)V' in 'sun/nio/cs/UTF_8')}
+  0x000001e8700622a4: 48ba 90e5 | 2446 e801 | 0000 458b | 4908 49ba | 0000 0005 | e801 0000 | 4d03 ca4c | 3b8a 8001 
+  0x000001e8700622c4: 0000 750d | 4883 8288 | 0100 0001 | e960 0000 | 004c 3b8a | 9001 0000 | 750d 4883 | 8298 0100 
+  0x000001e8700622e4: 0001 e94a | 0000 0048 | 83ba 8001 | 0000 0075 | 174c 898a | 8001 0000 | 48c7 8288 | 0100 0001 
+  0x000001e870062304: 0000 00e9 | 2900 0000 | 4883 ba90 | 0100 0000 | 7517 4c89 | 8a90 0100 | 0048 c782 | 9801 0000 
+  0x000001e870062324: 0100 0000 | e908 0000 | 0048 8382 | 7801 0000 | 0148 8b94 | 24f0 0000 
+
+  0x000001e87006233c: ;   {optimized virtual_call}
+  0x000001e87006233c: 0066 90e8 
+
+  0x000001e870062340: ; ImmutableOopMap {[240]=Oop }
+                      ;*invokevirtual arrayOffset {reexecute=0 rethrow=0 return_oop=0}
+                      ; - sun.nio.cs.UTF_8::updatePositions@14 (line 83)
+                      ; - sun.nio.cs.UTF_8$Decoder::xflow@5 (line 206)
+                      ; - sun.nio.cs.UTF_8$Decoder::decodeArrayLoop@327 (line 268)
+  0x000001e870062340: 9cc8 3e07 
+
+  0x000001e870062344: ;   {other}
+  0x000001e870062344: 0f1f 8400 | 3c1a 0006 | 4c8b 8c24 | f000 0000 
+
+  0x000001e870062354: ;   {metadata(method data for {method} {0x000001e8054870b0} 'updatePositions' '(Ljava/nio/Buffer;ILjava/nio/Buffer;I)V' in 'sun/nio/cs/UTF_8')}
+  0x000001e870062354: 49b8 90e5 | 2446 e801 | 0000 458b | 4908 49ba | 0000 0005 | e801 0000 | 4d03 ca4d | 3b88 b001 
+  0x000001e870062374: 0000 750d | 4983 80b8 | 0100 0001 | e960 0000 | 004d 3b88 | c001 0000 | 750d 4983 | 80c8 0100 
+  0x000001e870062394: 0001 e94a | 0000 0049 | 83b8 b001 | 0000 0075 | 174d 8988 | b001 0000 | 49c7 80b8 | 0100 0001 
+  0x000001e8700623b4: 0000 00e9 | 2900 0000 | 4983 b8c0 | 0100 0000 | 7517 4d89 | 88c0 0100 | 0049 c780 | c801 0000 
+  0x000001e8700623d4: 0100 0000 | e908 0000 | 0049 8380 | a801 0000 | 0144 8b84 | 2408 0100 | 0044 2bc0 
+
+  0x000001e8700623f0: ;   {metadata(method data for {method} {0x000001e8051f3b50} 'position' '(I)Ljava/nio/Buffer;' in 'java/nio/CharBuffer')}
+  0x000001e8700623f0: 48ba b0bc | 2446 e801 | 0000 8bb2 | cc00 0000 | 83c6 0289 | b2cc 0000 | 0081 e6fe | ff1f 0085 
+  0x000001e870062410: f60f 84e3 | 3000 004c | 8b8c 24f0 
+
+  0x000001e87006241c: ;   {metadata(method data for {method} {0x000001e8051f3b50} 'position' '(I)Ljava/nio/Buffer;' in 'java/nio/CharBuffer')}
+  0x000001e87006241c: 0000 0048 | bab0 bc24 | 46e8 0100 | 0048 8382 | 1801 0000 
+
+  0x000001e870062430: ;   {metadata(method data for {method} {0x000001e8051f52c0} 'position' '(I)Ljava/nio/CharBuffer;' in 'java/nio/CharBuffer')}
+  0x000001e870062430: 0148 ba40 | be24 46e8 | 0100 008b | b2cc 0000 | 0083 c602 | 89b2 cc00 | 0000 81e6 | feff 1f00 
+  0x000001e870062450: 85f6 0f84 | c330 0000 | 4c8b 8c24 | f000 0000 
+
+  0x000001e870062460: ;   {metadata(method data for {method} {0x000001e8051f52c0} 'position' '(I)Ljava/nio/CharBuffer;' in 'java/nio/CharBuffer')}
+  0x000001e870062460: 48ba 40be | 2446 e801 | 0000 4883 | 8218 0100 | 0001 488b | 9424 f000 | 0000 0f1f 
+
+  0x000001e87006247c: ;   {optimized virtual_call}
+  0x000001e87006247c: 4400 00e8 
+
+  0x000001e870062480: ; ImmutableOopMap {[240]=Oop }
+                      ;*invokespecial position {reexecute=0 rethrow=0 return_oop=0}
+                      ; - java.nio.CharBuffer::position@2 (line 1557)
+                      ; - java.nio.CharBuffer::position@2 (line 288)
+                      ; - sun.nio.cs.UTF_8::updatePositions@18 (line 83)
+                      ; - sun.nio.cs.UTF_8$Decoder::xflow@5 (line 206)
+                      ; - sun.nio.cs.UTF_8$Decoder::decodeArrayLoop@327 (line 268)
+  0x000001e870062480: 5cc7 3e07 
+
+  0x000001e870062484: ;   {other}
+  0x000001e870062484: 0f1f 8400 | 7c1b 0007 
+
+  0x000001e87006248c: ;   {metadata(method data for {method} {0x000001e84601cc20} 'xflow' '(Ljava/nio/Buffer;IILjava/nio/Buffer;II)Ljava/nio/charset/CoderResult;' in 'sun/nio/cs/UTF_8$Decoder')}
+  0x000001e87006248c: 48ba a8e3 | 2446 e801 | 0000 ff82 | 3801 0000 | 448b 8424 | 1001 0000 | 4183 f803 
+
+  0x000001e8700624a8: ;   {metadata(method data for {method} {0x000001e84601cc20} 'xflow' '(Ljava/nio/Buffer;IILjava/nio/Buffer;II)Ljava/nio/charset/CoderResult;' in 'sun/nio/cs/UTF_8$Decoder')}
+  0x000001e8700624a8: 48ba a8e3 | 2446 e801 | 0000 41b8 | 4801 0000 | 7d06 41b8 | 5801 0000 | 4a8b 3402 | 488d 7601 
+  0x000001e8700624c8: 4a89 3402 | 0f8d 1f00 
+
+  0x000001e8700624d0: ;   {metadata(method data for {method} {0x000001e84601cc20} 'xflow' '(Ljava/nio/Buffer;IILjava/nio/Buffer;II)Ljava/nio/charset/CoderResult;' in 'sun/nio/cs/UTF_8$Decoder')}
+  0x000001e8700624d0: 0000 48ba | a8e3 2446 | e801 0000 | ff82 6801 
+
+  0x000001e8700624e0: ;   {oop(a 'java/nio/charset/CoderResult'{0x000000008c6156e0})}
+  0x000001e8700624e0: 0000 48be | e056 618c | 0000 0000 | e9b1 1b00 
+
+  0x000001e8700624f0: ;   {oop(a 'java/nio/charset/CoderResult'{0x000000008c6156f8})}
+  0x000001e8700624f0: 0048 bef8 | 5661 8c00 | 0000 00e9 | a21b 0000 | 8bbc 24fc | 0000 0089 | 8424 0801 | 0000 488b 
+  0x000001e870062510: 9c24 e000 | 0000 81e7 | ff00 0000 | 81ff f400 
+
+  0x000001e870062520: ;   {metadata(method data for {method} {0x000001e84601d1c0} 'decodeArrayLoop' '(Ljava/nio/ByteBuffer;Ljava/nio/CharBuffer;)Ljava/nio/charset/CoderResult;' in 'sun/nio/cs/UTF_8$Decoder')}
+  0x000001e870062520: 0000 48ba | 10d6 2446 | e801 0000 | 41b8 1006 | 0000 7f06 | 41b8 2006 | 0000 4a8b | 3402 488d 
+  0x000001e870062540: 7601 4a89 | 3402 0f8f | 3e17 0000 
+
+  0x000001e87006254c: ;   {metadata(method data for {method} {0x000001e84601d1c0} 'decodeArrayLoop' '(Ljava/nio/ByteBuffer;Ljava/nio/CharBuffer;)Ljava/nio/charset/CoderResult;' in 'sun/nio/cs/UTF_8$Decoder')}
+  0x000001e87006254c: 83f9 0148 | ba10 d624 | 46e8 0100 | 0041 b830 | 0600 007e | 0641 b840 | 0600 004a | 8b34 0248 
+  0x000001e87006256c: 8d76 014a | 8934 020f | 8e7c 0000 | 008b 9424 | f800 0000 | ffc2 3b53 | 0c0f 83b1 | 2f00 0048 
+  0x000001e87006258c: 63d2 0fbe 
+
+  0x000001e870062590: ;   {metadata(method data for {method} {0x000001e84601d1c0} 'decodeArrayLoop' '(Ljava/nio/ByteBuffer;Ljava/nio/CharBuffer;)Ljava/nio/charset/CoderResult;' in 'sun/nio/cs/UTF_8$Decoder')}
+  0x000001e870062590: 5413 1049 | b810 d624 | 46e8 0100 | 0049 8380 | 5006 0000 | 014c 8bc2 | 4181 e0ff | 0000 0048 
+  0x000001e8700625b0: 8bd7 0f1f 
+
+  0x000001e8700625b4: ;   {static_call}
+  0x000001e8700625b4: 4400 00e8 
+
+  0x000001e8700625b8: ; ImmutableOopMap {[224]=Oop [232]=Oop [240]=Oop }
+                      ;*invokestatic isMalformed4_2 {reexecute=0 rethrow=0 return_oop=0}
+                      ; - sun.nio.cs.UTF_8$Decoder::decodeArrayLoop@490 (line 291)
+  0x000001e8700625b8: 24d0 3e07 
+
+  0x000001e8700625bc: ;   {other}
+  0x000001e8700625bc: 0f1f 8400 | b41c 0008 
+
+  0x000001e8700625c4: ;   {metadata(method data for {method} {0x000001e84601d1c0} 'decodeArrayLoop' '(Ljava/nio/ByteBuffer;Ljava/nio/CharBuffer;)Ljava/nio/charset/CoderResult;' in 'sun/nio/cs/UTF_8$Decoder')}
+  0x000001e8700625c4: 85c0 48ba | 10d6 2446 | e801 0000 | be70 0600 | 0075 05be | 6006 0000 | 488b 3c32 | 488d 7f01 
+  0x000001e8700625e4: 4889 3c32 | 0f85 9c16 | 0000 8b8c | 2414 0100 | 0083 f902 
+
+  0x000001e8700625f8: ;   {metadata(method data for {method} {0x000001e84601d1c0} 'decodeArrayLoop' '(Ljava/nio/ByteBuffer;Ljava/nio/CharBuffer;)Ljava/nio/charset/CoderResult;' in 'sun/nio/cs/UTF_8$Decoder')}
+  0x000001e8700625f8: 48ba 10d6 | 2446 e801 | 0000 be90 | 0600 007e | 05be a006 | 0000 488b | 3c32 488d | 7f01 4889 
+  0x000001e870062618: 3c32 0f8e | dc00 0000 | 488b 9c24 | e000 0000 | 8b94 24f8 | 0000 0083 | c202 3b53 | 0c0f 830f 
+  0x000001e870062638: 2f00 0048 | 63d2 0fbe 
+
+  0x000001e870062640: ;   {metadata(method data for {method} {0x000001e84601d1c0} 'decodeArrayLoop' '(Ljava/nio/ByteBuffer;Ljava/nio/CharBuffer;)Ljava/nio/charset/CoderResult;' in 'sun/nio/cs/UTF_8$Decoder')}
+  0x000001e870062640: 5413 1048 | be10 d624 | 46e8 0100 | 0048 8386 | b006 0000 
+
+  0x000001e870062654: ;   {metadata(method data for {method} {0x000001e84601c598} 'isMalformed4_3' '(I)Z' in 'sun/nio/cs/UTF_8$Decoder')}
+  0x000001e870062654: 0148 bef8 | 3b25 46e8 | 0100 008b | becc 0000 | 0083 c702 | 89be cc00 | 0000 81e7 | feff 1f00 
+  0x000001e870062674: 85ff 0f84 | dc2e 0000 | 81e2 c000 | 0000 81fa | 8000 0000 
+
+  0x000001e870062688: ;   {metadata(method data for {method} {0x000001e84601c598} 'isMalformed4_3' '(I)Z' in 'sun/nio/cs/UTF_8$Decoder')}
+  0x000001e870062688: 48ba f83b | 2546 e801 | 0000 be18 | 0100 0074 | 05be 2801 | 0000 488b | 3c32 488d | 7f01 4889 
+  0x000001e8700626a8: 3c32 0f84 | 1a00 0000 
+
+  0x000001e8700626b0: ;   {metadata(method data for {method} {0x000001e84601c598} 'isMalformed4_3' '(I)Z' in 'sun/nio/cs/UTF_8$Decoder')}
+  0x000001e8700626b0: 48ba f83b | 2546 e801 | 0000 ff82 | 3801 0000 | ba01 0000 | 00e9 0500 | 0000 ba00 | 0000 0083 
+  0x000001e8700626d0: e201 85d2 
+
+  0x000001e8700626d4: ;   {metadata(method data for {method} {0x000001e84601d1c0} 'decodeArrayLoop' '(Ljava/nio/ByteBuffer;Ljava/nio/CharBuffer;)Ljava/nio/charset/CoderResult;' in 'sun/nio/cs/UTF_8$Decoder')}
+  0x000001e8700626d4: 48ba 10d6 | 2446 e801 | 0000 bed0 | 0600 0075 | 05be c006 | 0000 488b | 3c32 488d | 7f01 4889 
+  0x000001e8700626f4: 3c32 0f85 | 7311 0000 
+
+  0x000001e8700626fc: ;   {metadata(method data for {method} {0x000001e84601d1c0} 'decodeArrayLoop' '(Ljava/nio/ByteBuffer;Ljava/nio/CharBuffer;)Ljava/nio/charset/CoderResult;' in 'sun/nio/cs/UTF_8$Decoder')}
+  0x000001e8700626fc: 48ba 10d6 | 2446 e801 | 0000 4883 | 82f0 0600 
+
+  0x000001e87006270c: ;   {metadata(method data for {method} {0x000001e84601cc20} 'xflow' '(Ljava/nio/Buffer;IILjava/nio/Buffer;II)Ljava/nio/charset/CoderResult;' in 'sun/nio/cs/UTF_8$Decoder')}
+  0x000001e87006270c: 0001 48ba | a8e3 2446 | e801 0000 | 8bb2 cc00 | 0000 83c6 | 0289 b2cc | 0000 0081 | e6fe ff1f 
+  0x000001e87006272c: 0085 f60f | 8444 2e00 
+
+  0x000001e870062734: ;   {metadata(method data for {method} {0x000001e84601cc20} 'xflow' '(Ljava/nio/Buffer;IILjava/nio/Buffer;II)Ljava/nio/charset/CoderResult;' in 'sun/nio/cs/UTF_8$Decoder')}
+  0x000001e870062734: 0048 baa8 | e324 46e8 | 0100 0048 | 8382 1801 
+
+  0x000001e870062744: ;   {metadata(method data for {method} {0x000001e8054870b0} 'updatePositions' '(Ljava/nio/Buffer;ILjava/nio/Buffer;I)V' in 'sun/nio/cs/UTF_8')}
+  0x000001e870062744: 0000 0148 | ba90 e524 | 46e8 0100 | 008b b2cc | 0000 0083 | c602 89b2 | cc00 0000 | 81e6 feff 
+  0x000001e870062764: 1f00 85f6 | 0f84 2c2e | 0000 4c8b | 8424 e800 
+
+  0x000001e870062774: ;   {metadata(method data for {method} {0x000001e8054870b0} 'updatePositions' '(Ljava/nio/Buffer;ILjava/nio/Buffer;I)V' in 'sun/nio/cs/UTF_8')}
+  0x000001e870062774: 0000 48ba | 90e5 2446 | e801 0000 | 458b 4008 | 49ba 0000 | 0005 e801 | 0000 4d03 | c24c 3b82 
+  0x000001e870062794: 2001 0000 | 750d 4883 | 8228 0100 | 0001 e960 | 0000 004c | 3b82 3001 | 0000 750d | 4883 8238 
+  0x000001e8700627b4: 0100 0001 | e94a 0000 | 0048 83ba | 2001 0000 | 0075 174c | 8982 2001 | 0000 48c7 | 8228 0100 
+  0x000001e8700627d4: 0001 0000 | 00e9 2900 | 0000 4883 | ba30 0100 | 0000 7517 | 4c89 8230 | 0100 0048 | c782 3801 
+  0x000001e8700627f4: 0000 0100 | 0000 e908 | 0000 0048 | 8382 1801 | 0000 0148 | 8b94 24e8 
+
+  0x000001e87006280c: ;   {optimized virtual_call}
+  0x000001e87006280c: 0000 00e8 
+
+  0x000001e870062810: ; ImmutableOopMap {[232]=Oop [240]=Oop }
+                      ;*invokevirtual arrayOffset {reexecute=0 rethrow=0 return_oop=0}
+                      ; - sun.nio.cs.UTF_8::updatePositions@3 (line 82)
+                      ; - sun.nio.cs.UTF_8$Decoder::xflow@5 (line 206)
+                      ; - sun.nio.cs.UTF_8$Decoder::decodeArrayLoop@545 (line 295)
+  0x000001e870062810: ccc3 3e07 
+
+  0x000001e870062814: ;   {other}
+  0x000001e870062814: 0f1f 8400 | 0c1f 0009 | 4c8b 8424 | e800 0000 
+
+  0x000001e870062824: ;   {metadata(method data for {method} {0x000001e8054870b0} 'updatePositions' '(Ljava/nio/Buffer;ILjava/nio/Buffer;I)V' in 'sun/nio/cs/UTF_8')}
+  0x000001e870062824: 48ba 90e5 | 2446 e801 | 0000 458b | 4008 49ba | 0000 0005 | e801 0000 | 4d03 c24c | 3b82 5001 
+  0x000001e870062844: 0000 750d | 4883 8258 | 0100 0001 | e960 0000 | 004c 3b82 | 6001 0000 | 750d 4883 | 8268 0100 
+  0x000001e870062864: 0001 e94a | 0000 0048 | 83ba 5001 | 0000 0075 | 174c 8982 | 5001 0000 | 48c7 8258 | 0100 0001 
+  0x000001e870062884: 0000 00e9 | 2900 0000 | 4883 ba60 | 0100 0000 | 7517 4c89 | 8260 0100 | 0048 c782 | 6801 0000 
+  0x000001e8700628a4: 0100 0000 | e908 0000 | 0048 8382 | 4801 0000 | 018b 9424 | f800 0000 | 2bd0 4c8b | c248 8b94 
+  0x000001e8700628c4: 24e8 0000 | 000f 1f40 | 0048 b848 | 0f38 4ae8 
+
+  0x000001e8700628d4: ;   {virtual_call}
+  0x000001e8700628d4: 0100 00e8 
+
+  0x000001e8700628d8: ; ImmutableOopMap {[240]=Oop }
+                      ;*invokevirtual position {reexecute=0 rethrow=0 return_oop=0}
+                      ; - sun.nio.cs.UTF_8::updatePositions@7 (line 82)
+                      ; - sun.nio.cs.UTF_8$Decoder::xflow@5 (line 206)
+                      ; - sun.nio.cs.UTF_8$Decoder::decodeArrayLoop@545 (line 295)
+  0x000001e8700628d8: 04c8 3e07 
+
+  0x000001e8700628dc: ;   {other}
+  0x000001e8700628dc: 0f1f 8400 | d41f 000a | 4c8b 8c24 | f000 0000 
+
+  0x000001e8700628ec: ;   {metadata(method data for {method} {0x000001e8054870b0} 'updatePositions' '(Ljava/nio/Buffer;ILjava/nio/Buffer;I)V' in 'sun/nio/cs/UTF_8')}
+  0x000001e8700628ec: 48ba 90e5 | 2446 e801 | 0000 458b | 4908 49ba | 0000 0005 | e801 0000 | 4d03 ca4c | 3b8a 8001 
+  0x000001e87006290c: 0000 750d | 4883 8288 | 0100 0001 | e960 0000 | 004c 3b8a | 9001 0000 | 750d 4883 | 8298 0100 
+  0x000001e87006292c: 0001 e94a | 0000 0048 | 83ba 8001 | 0000 0075 | 174c 898a | 8001 0000 | 48c7 8288 | 0100 0001 
+  0x000001e87006294c: 0000 00e9 | 2900 0000 | 4883 ba90 | 0100 0000 | 7517 4c89 | 8a90 0100 | 0048 c782 | 9801 0000 
+  0x000001e87006296c: 0100 0000 | e908 0000 | 0048 8382 | 7801 0000 | 0148 8b94 | 24f0 0000 
+
+  0x000001e870062984: ;   {optimized virtual_call}
+  0x000001e870062984: 0066 90e8 
+
+  0x000001e870062988: ; ImmutableOopMap {[240]=Oop }
+                      ;*invokevirtual arrayOffset {reexecute=0 rethrow=0 return_oop=0}
+                      ; - sun.nio.cs.UTF_8::updatePositions@14 (line 83)
+                      ; - sun.nio.cs.UTF_8$Decoder::xflow@5 (line 206)
+                      ; - sun.nio.cs.UTF_8$Decoder::decodeArrayLoop@545 (line 295)
+  0x000001e870062988: 54c2 3e07 
+
+  0x000001e87006298c: ;   {other}
+  0x000001e87006298c: 0f1f 8400 | 8420 000b | 4c8b 8c24 | f000 0000 
+
+  0x000001e87006299c: ;   {metadata(method data for {method} {0x000001e8054870b0} 'updatePositions' '(Ljava/nio/Buffer;ILjava/nio/Buffer;I)V' in 'sun/nio/cs/UTF_8')}
+  0x000001e87006299c: 49b8 90e5 | 2446 e801 | 0000 458b | 4908 49ba | 0000 0005 | e801 0000 | 4d03 ca4d | 3b88 b001 
+  0x000001e8700629bc: 0000 750d | 4983 80b8 | 0100 0001 | e960 0000 | 004d 3b88 | c001 0000 | 750d 4983 | 80c8 0100 
+  0x000001e8700629dc: 0001 e94a | 0000 0049 | 83b8 b001 | 0000 0075 | 174d 8988 | b001 0000 | 49c7 80b8 | 0100 0001 
+  0x000001e8700629fc: 0000 00e9 | 2900 0000 | 4983 b8c0 | 0100 0000 | 7517 4d89 | 88c0 0100 | 0049 c780 | c801 0000 
+  0x000001e870062a1c: 0100 0000 | e908 0000 | 0049 8380 | a801 0000 | 0144 8b84 | 2408 0100 | 0044 2bc0 
+
+  0x000001e870062a38: ;   {metadata(method data for {method} {0x000001e8051f3b50} 'position' '(I)Ljava/nio/Buffer;' in 'java/nio/CharBuffer')}
+  0x000001e870062a38: 48ba b0bc | 2446 e801 | 0000 8bb2 | cc00 0000 | 83c6 0289 | b2cc 0000 | 0081 e6fe | ff1f 0085 
+  0x000001e870062a58: f60f 845c | 2b00 004c | 8b8c 24f0 
+
+  0x000001e870062a64: ;   {metadata(method data for {method} {0x000001e8051f3b50} 'position' '(I)Ljava/nio/Buffer;' in 'java/nio/CharBuffer')}
+  0x000001e870062a64: 0000 0048 | bab0 bc24 | 46e8 0100 | 0048 8382 | 1801 0000 
+
+  0x000001e870062a78: ;   {metadata(method data for {method} {0x000001e8051f52c0} 'position' '(I)Ljava/nio/CharBuffer;' in 'java/nio/CharBuffer')}
+  0x000001e870062a78: 0148 ba40 | be24 46e8 | 0100 008b | b2cc 0000 | 0083 c602 | 89b2 cc00 | 0000 81e6 | feff 1f00 
+  0x000001e870062a98: 85f6 0f84 | 3c2b 0000 | 4c8b 8c24 | f000 0000 
+
+  0x000001e870062aa8: ;   {metadata(method data for {method} {0x000001e8051f52c0} 'position' '(I)Ljava/nio/CharBuffer;' in 'java/nio/CharBuffer')}
+  0x000001e870062aa8: 48ba 40be | 2446 e801 | 0000 4883 | 8218 0100 | 0001 488b | 9424 f000 | 0000 0f1f 
+
+  0x000001e870062ac4: ;   {optimized virtual_call}
+  0x000001e870062ac4: 4400 00e8 
+
+  0x000001e870062ac8: ; ImmutableOopMap {[240]=Oop }
+                      ;*invokespecial position {reexecute=0 rethrow=0 return_oop=0}
+                      ; - java.nio.CharBuffer::position@2 (line 1557)
+                      ; - java.nio.CharBuffer::position@2 (line 288)
+                      ; - sun.nio.cs.UTF_8::updatePositions@18 (line 83)
+                      ; - sun.nio.cs.UTF_8$Decoder::xflow@5 (line 206)
+                      ; - sun.nio.cs.UTF_8$Decoder::decodeArrayLoop@545 (line 295)
+  0x000001e870062ac8: 14c1 3e07 
+
+  0x000001e870062acc: ;   {other}
+  0x000001e870062acc: 0f1f 8400 | c421 000c 
+
+  0x000001e870062ad4: ;   {metadata(method data for {method} {0x000001e84601cc20} 'xflow' '(Ljava/nio/Buffer;IILjava/nio/Buffer;II)Ljava/nio/charset/CoderResult;' in 'sun/nio/cs/UTF_8$Decoder')}
+  0x000001e870062ad4: 48ba a8e3 | 2446 e801 | 0000 ff82 | 3801 0000 | 8b8c 2414 | 0100 0083 
+
+  0x000001e870062aec: ;   {metadata(method data for {method} {0x000001e84601cc20} 'xflow' '(Ljava/nio/Buffer;IILjava/nio/Buffer;II)Ljava/nio/charset/CoderResult;' in 'sun/nio/cs/UTF_8$Decoder')}
+  0x000001e870062aec: f904 48ba | a8e3 2446 | e801 0000 | be48 0100 | 007d 05be | 5801 0000 | 488b 3c32 | 488d 7f01 
+  0x000001e870062b0c: 4889 3c32 | 0f8d 1f00 
+
+  0x000001e870062b14: ;   {metadata(method data for {method} {0x000001e84601cc20} 'xflow' '(Ljava/nio/Buffer;IILjava/nio/Buffer;II)Ljava/nio/charset/CoderResult;' in 'sun/nio/cs/UTF_8$Decoder')}
+  0x000001e870062b14: 0000 48ba | a8e3 2446 | e801 0000 | ff82 6801 
+
+  0x000001e870062b24: ;   {oop(a 'java/nio/charset/CoderResult'{0x000000008c6156e0})}
+  0x000001e870062b24: 0000 48be | e056 618c | 0000 0000 | e921 0d00 
+
+  0x000001e870062b34: ;   {oop(a 'java/nio/charset/CoderResult'{0x000000008c6156f8})}
+  0x000001e870062b34: 0048 bef8 | 5661 8c00 | 0000 00e9 | 120d 0000 | 898c 2418 | 0100 0089 | 8424 0801 
+
+  0x000001e870062b50: ;   {metadata(method data for {method} {0x000001e84601d1c0} 'decodeArrayLoop' '(Ljava/nio/ByteBuffer;Ljava/nio/CharBuffer;)Ljava/nio/charset/CoderResult;' in 'sun/nio/cs/UTF_8$Decoder')}
+  0x000001e870062b50: 0000 48ba | 10d6 2446 | e801 0000 | 4883 82e0 | 0300 0001 
+
+  0x000001e870062b64: ;   {metadata(method data for {method} {0x000001e84601cc20} 'xflow' '(Ljava/nio/Buffer;IILjava/nio/Buffer;II)Ljava/nio/charset/CoderResult;' in 'sun/nio/cs/UTF_8$Decoder')}
+  0x000001e870062b64: 48ba a8e3 | 2446 e801 | 0000 8bb2 | cc00 0000 | 83c6 0289 | b2cc 0000 | 0081 e6fe | ff1f 0085 
+  0x000001e870062b84: f60f 8472 
+
+  0x000001e870062b88: ;   {metadata(method data for {method} {0x000001e84601cc20} 'xflow' '(Ljava/nio/Buffer;IILjava/nio/Buffer;II)Ljava/nio/charset/CoderResult;' in 'sun/nio/cs/UTF_8$Decoder')}
+  0x000001e870062b88: 2a00 0048 | baa8 e324 | 46e8 0100 | 0048 8382 | 1801 0000 
+
+  0x000001e870062b9c: ;   {metadata(method data for {method} {0x000001e8054870b0} 'updatePositions' '(Ljava/nio/Buffer;ILjava/nio/Buffer;I)V' in 'sun/nio/cs/UTF_8')}
+  0x000001e870062b9c: 0148 ba90 | e524 46e8 | 0100 008b | b2cc 0000 | 0083 c602 | 89b2 cc00 | 0000 81e6 | feff 1f00 
+  0x000001e870062bbc: 85f6 0f84 | 5a2a 0000 | 4c8b 8424 | e800 0000 
+
+  0x000001e870062bcc: ;   {metadata(method data for {method} {0x000001e8054870b0} 'updatePositions' '(Ljava/nio/Buffer;ILjava/nio/Buffer;I)V' in 'sun/nio/cs/UTF_8')}
+  0x000001e870062bcc: 48ba 90e5 | 2446 e801 | 0000 458b | 4008 49ba | 0000 0005 | e801 0000 | 4d03 c24c | 3b82 2001 
+  0x000001e870062bec: 0000 750d | 4883 8228 | 0100 0001 | e960 0000 | 004c 3b82 | 3001 0000 | 750d 4883 | 8238 0100 
+  0x000001e870062c0c: 0001 e94a | 0000 0048 | 83ba 2001 | 0000 0075 | 174c 8982 | 2001 0000 | 48c7 8228 | 0100 0001 
+  0x000001e870062c2c: 0000 00e9 | 2900 0000 | 4883 ba30 | 0100 0000 | 7517 4c89 | 8230 0100 | 0048 c782 | 3801 0000 
+  0x000001e870062c4c: 0100 0000 | e908 0000 | 0048 8382 | 1801 0000 | 0148 8b94 | 24e8 0000 
+
+  0x000001e870062c64: ;   {optimized virtual_call}
+  0x000001e870062c64: 0066 90e8 
+
+  0x000001e870062c68: ; ImmutableOopMap {[232]=Oop [240]=Oop }
+                      ;*invokevirtual arrayOffset {reexecute=0 rethrow=0 return_oop=0}
+                      ; - sun.nio.cs.UTF_8::updatePositions@3 (line 82)
+                      ; - sun.nio.cs.UTF_8$Decoder::xflow@5 (line 206)
+                      ; - sun.nio.cs.UTF_8$Decoder::decodeArrayLoop@200 (line 247)
+  0x000001e870062c68: 74bf 3e07 
+
+  0x000001e870062c6c: ;   {other}
+  0x000001e870062c6c: 0f1f 8400 | 6423 000d | 4c8b 8424 | e800 0000 
+
+  0x000001e870062c7c: ;   {metadata(method data for {method} {0x000001e8054870b0} 'updatePositions' '(Ljava/nio/Buffer;ILjava/nio/Buffer;I)V' in 'sun/nio/cs/UTF_8')}
+  0x000001e870062c7c: 48ba 90e5 | 2446 e801 | 0000 458b | 4008 49ba | 0000 0005 | e801 0000 | 4d03 c24c | 3b82 5001 
+  0x000001e870062c9c: 0000 750d | 4883 8258 | 0100 0001 | e960 0000 | 004c 3b82 | 6001 0000 | 750d 4883 | 8268 0100 
+  0x000001e870062cbc: 0001 e94a | 0000 0048 | 83ba 5001 | 0000 0075 | 174c 8982 | 5001 0000 | 48c7 8258 | 0100 0001 
+  0x000001e870062cdc: 0000 00e9 | 2900 0000 | 4883 ba60 | 0100 0000 | 7517 4c89 | 8260 0100 | 0048 c782 | 6801 0000 
+  0x000001e870062cfc: 0100 0000 | e908 0000 | 0048 8382 | 4801 0000 | 018b 9424 | f800 0000 | 2bd0 4c8b | c248 8b94 
+  0x000001e870062d1c: 24e8 0000 | 000f 1f40 | 0048 b870 | 0f38 4ae8 
+
+  0x000001e870062d2c: ;   {virtual_call}
+  0x000001e870062d2c: 0100 00e8 
+
+  0x000001e870062d30: ; ImmutableOopMap {[240]=Oop }
+                      ;*invokevirtual position {reexecute=0 rethrow=0 return_oop=0}
+                      ; - sun.nio.cs.UTF_8::updatePositions@7 (line 82)
+                      ; - sun.nio.cs.UTF_8$Decoder::xflow@5 (line 206)
+                      ; - sun.nio.cs.UTF_8$Decoder::decodeArrayLoop@200 (line 247)
+  0x000001e870062d30: acc3 3e07 
+
+  0x000001e870062d34: ;   {other}
+  0x000001e870062d34: 0f1f 8400 | 2c24 000e | 4c8b 8c24 | f000 0000 
+
+  0x000001e870062d44: ;   {metadata(method data for {method} {0x000001e8054870b0} 'updatePositions' '(Ljava/nio/Buffer;ILjava/nio/Buffer;I)V' in 'sun/nio/cs/UTF_8')}
+  0x000001e870062d44: 48ba 90e5 | 2446 e801 | 0000 458b | 4908 49ba | 0000 0005 | e801 0000 | 4d03 ca4c | 3b8a 8001 
+  0x000001e870062d64: 0000 750d | 4883 8288 | 0100 0001 | e960 0000 | 004c 3b8a | 9001 0000 | 750d 4883 | 8298 0100 
+  0x000001e870062d84: 0001 e94a | 0000 0048 | 83ba 8001 | 0000 0075 | 174c 898a | 8001 0000 | 48c7 8288 | 0100 0001 
+  0x000001e870062da4: 0000 00e9 | 2900 0000 | 4883 ba90 | 0100 0000 | 7517 4c89 | 8a90 0100 | 0048 c782 | 9801 0000 
+  0x000001e870062dc4: 0100 0000 | e908 0000 | 0048 8382 | 7801 0000 | 0148 8b94 | 24f0 0000 
+
+  0x000001e870062ddc: ;   {optimized virtual_call}
+  0x000001e870062ddc: 0066 90e8 
+
+  0x000001e870062de0: ; ImmutableOopMap {[240]=Oop }
+                      ;*invokevirtual arrayOffset {reexecute=0 rethrow=0 return_oop=0}
+                      ; - sun.nio.cs.UTF_8::updatePositions@14 (line 83)
+                      ; - sun.nio.cs.UTF_8$Decoder::xflow@5 (line 206)
+                      ; - sun.nio.cs.UTF_8$Decoder::decodeArrayLoop@200 (line 247)
+  0x000001e870062de0: fcbd 3e07 
+
+  0x000001e870062de4: ;   {other}
+  0x000001e870062de4: 0f1f 8400 | dc24 000f | 4c8b 8c24 | f000 0000 
+
+  0x000001e870062df4: ;   {metadata(method data for {method} {0x000001e8054870b0} 'updatePositions' '(Ljava/nio/Buffer;ILjava/nio/Buffer;I)V' in 'sun/nio/cs/UTF_8')}
+  0x000001e870062df4: 49b8 90e5 | 2446 e801 | 0000 458b | 4908 49ba | 0000 0005 | e801 0000 | 4d03 ca4d | 3b88 b001 
+  0x000001e870062e14: 0000 750d | 4983 80b8 | 0100 0001 | e960 0000 | 004d 3b88 | c001 0000 | 750d 4983 | 80c8 0100 
+  0x000001e870062e34: 0001 e94a | 0000 0049 | 83b8 b001 | 0000 0075 | 174d 8988 | b001 0000 | 49c7 80b8 | 0100 0001 
+  0x000001e870062e54: 0000 00e9 | 2900 0000 | 4983 b8c0 | 0100 0000 | 7517 4d89 | 88c0 0100 | 0049 c780 | c801 0000 
+  0x000001e870062e74: 0100 0000 | e908 0000 | 0049 8380 | a801 0000 | 0144 8b84 | 2408 0100 | 0044 2bc0 
+
+  0x000001e870062e90: ;   {metadata(method data for {method} {0x000001e8051f3b50} 'position' '(I)Ljava/nio/Buffer;' in 'java/nio/CharBuffer')}
+  0x000001e870062e90: 48ba b0bc | 2446 e801 | 0000 8bb2 | cc00 0000 | 83c6 0289 | b2cc 0000 | 0081 e6fe | ff1f 0085 
+  0x000001e870062eb0: f60f 8488 | 2700 004c | 8b8c 24f0 
+
+  0x000001e870062ebc: ;   {metadata(method data for {method} {0x000001e8051f3b50} 'position' '(I)Ljava/nio/Buffer;' in 'java/nio/CharBuffer')}
+  0x000001e870062ebc: 0000 0048 | bab0 bc24 | 46e8 0100 | 0048 8382 | 1801 0000 
+
+  0x000001e870062ed0: ;   {metadata(method data for {method} {0x000001e8051f52c0} 'position' '(I)Ljava/nio/CharBuffer;' in 'java/nio/CharBuffer')}
+  0x000001e870062ed0: 0148 ba40 | be24 46e8 | 0100 008b | b2cc 0000 | 0083 c602 | 89b2 cc00 | 0000 81e6 | feff 1f00 
+  0x000001e870062ef0: 85f6 0f84 | 6827 0000 | 4c8b 8c24 | f000 0000 
+
+  0x000001e870062f00: ;   {metadata(method data for {method} {0x000001e8051f52c0} 'position' '(I)Ljava/nio/CharBuffer;' in 'java/nio/CharBuffer')}
+  0x000001e870062f00: 48ba 40be | 2446 e801 | 0000 4883 | 8218 0100 | 0001 488b | 9424 f000 | 0000 0f1f 
+
+  0x000001e870062f1c: ;   {optimized virtual_call}
+  0x000001e870062f1c: 4400 00e8 
+
+  0x000001e870062f20: ; ImmutableOopMap {[240]=Oop }
+                      ;*invokespecial position {reexecute=0 rethrow=0 return_oop=0}
+                      ; - java.nio.CharBuffer::position@2 (line 1557)
+                      ; - java.nio.CharBuffer::position@2 (line 288)
+                      ; - sun.nio.cs.UTF_8::updatePositions@18 (line 83)
+                      ; - sun.nio.cs.UTF_8$Decoder::xflow@5 (line 206)
+                      ; - sun.nio.cs.UTF_8$Decoder::decodeArrayLoop@200 (line 247)
+  0x000001e870062f20: bcbc 3e07 
+
+  0x000001e870062f24: ;   {other}
+  0x000001e870062f24: 0f1f 8400 | 1c26 0010 
+
+  0x000001e870062f2c: ;   {metadata(method data for {method} {0x000001e84601cc20} 'xflow' '(Ljava/nio/Buffer;IILjava/nio/Buffer;II)Ljava/nio/charset/CoderResult;' in 'sun/nio/cs/UTF_8$Decoder')}
+  0x000001e870062f2c: 48ba a8e3 | 2446 e801 | 0000 ff82 | 3801 0000 | 8b8c 2418 | 0100 0083 
+
+  0x000001e870062f44: ;   {metadata(method data for {method} {0x000001e84601cc20} 'xflow' '(Ljava/nio/Buffer;IILjava/nio/Buffer;II)Ljava/nio/charset/CoderResult;' in 'sun/nio/cs/UTF_8$Decoder')}
+  0x000001e870062f44: f902 48ba | a8e3 2446 | e801 0000 | be48 0100 | 007d 05be | 5801 0000 | 488b 3c32 | 488d 7f01 
+  0x000001e870062f64: 4889 3c32 | 0f8d 1f00 
+
+  0x000001e870062f6c: ;   {metadata(method data for {method} {0x000001e84601cc20} 'xflow' '(Ljava/nio/Buffer;IILjava/nio/Buffer;II)Ljava/nio/charset/CoderResult;' in 'sun/nio/cs/UTF_8$Decoder')}
+  0x000001e870062f6c: 0000 48ba | a8e3 2446 | e801 0000 | ff82 6801 
+
+  0x000001e870062f7c: ;   {oop(a 'java/nio/charset/CoderResult'{0x000000008c6156e0})}
+  0x000001e870062f7c: 0000 48be | e056 618c | 0000 0000 | e9b0 0800 
+
+  0x000001e870062f8c: ;   {oop(a 'java/nio/charset/CoderResult'{0x000000008c6156f8})}
+  0x000001e870062f8c: 0048 bef8 | 5661 8c00 | 0000 00e9 | a108 0000 | 8984 2408 | 0100 0089 | 9424 f800 
+[error occurred during error reporting (printing code blobs if possible), id 0xc0000005, EXCEPTION_ACCESS_VIOLATION (0xc0000005) at pc=0x00007ffa71e78a24]
+
+---------------  P R O C E S S  ---------------
+
+Threads class SMR info:
+_java_thread_list=0x000001e84a802a50, length=13, elements={
+0x000001e865355130, 0x000001e8043c6460, 0x000001e8043ca290, 0x000001e8043cc6f0,
+0x000001e8043cd240, 0x000001e8043cec70, 0x000001e8043d3700, 0x000001e8043d22d0,
+0x000001e8043fb380, 0x000001e8045a0600, 0x000001e8045a64c0, 0x000001e84a9b9330,
+0x000001e84a9b9fd0
+}
+
+Java Threads: ( => current thread )
+=>0x000001e865355130 JavaThread "main"                              [_thread_in_Java, id=22232, stack(0x000000c74d700000,0x000000c74d800000) (1024K)]
+  0x000001e8043c6460 JavaThread "Reference Handler"          daemon [_thread_blocked, id=1184, stack(0x000000c74df00000,0x000000c74e000000) (1024K)]
+  0x000001e8043ca290 JavaThread "Finalizer"                  daemon [_thread_blocked, id=3696, stack(0x000000c74e000000,0x000000c74e100000) (1024K)]
+  0x000001e8043cc6f0 JavaThread "Signal Dispatcher"          daemon [_thread_blocked, id=12584, stack(0x000000c74e100000,0x000000c74e200000) (1024K)]
+  0x000001e8043cd240 JavaThread "Attach Listener"            daemon [_thread_blocked, id=5748, stack(0x000000c74e200000,0x000000c74e300000) (1024K)]
+  0x000001e8043cec70 JavaThread "Service Thread"             daemon [_thread_blocked, id=12012, stack(0x000000c74e300000,0x000000c74e400000) (1024K)]
+  0x000001e8043d3700 JavaThread "Monitor Deflation Thread"   daemon [_thread_blocked, id=21260, stack(0x000000c74e400000,0x000000c74e500000) (1024K)]
+  0x000001e8043d22d0 JavaThread "C2 CompilerThread0"         daemon [_thread_blocked, id=14476, stack(0x000000c74e500000,0x000000c74e600000) (1024K)]
+  0x000001e8043fb380 JavaThread "C1 CompilerThread0"         daemon [_thread_blocked, id=20952, stack(0x000000c74e600000,0x000000c74e700000) (1024K)]
+  0x000001e8045a0600 JavaThread "Notification Thread"        daemon [_thread_blocked, id=2384, stack(0x000000c74e700000,0x000000c74e800000) (1024K)]
+  0x000001e8045a64c0 JavaThread "Common-Cleaner"             daemon [_thread_blocked, id=22408, stack(0x000000c74e800000,0x000000c74e900000) (1024K)]
+  0x000001e84a9b9330 JavaThread "C2 CompilerThread1"         daemon [_thread_blocked, id=15540, stack(0x000000c74e900000,0x000000c74ea00000) (1024K)]
+  0x000001e84a9b9fd0 JavaThread "C2 CompilerThread2"         daemon [_thread_blocked, id=8796, stack(0x000000c74ea00000,0x000000c74eb00000) (1024K)]
+Total: 13
+
+Other Threads:
+  0x000001e8043acd80 VMThread "VM Thread"                           [id=10180, stack(0x000000c74de00000,0x000000c74df00000) (1024K)]
+  0x000001e804399ee0 WatcherThread "VM Periodic Task Thread"        [id=18612, stack(0x000000c74dd00000,0x000000c74de00000) (1024K)]
+  0x000001e8677f5f60 WorkerThread "GC Thread#0"                     [id=17852, stack(0x000000c74d800000,0x000000c74d900000) (1024K)]
+  0x000001e86780a580 ConcurrentGCThread "G1 Main Marker"            [id=21368, stack(0x000000c74d900000,0x000000c74da00000) (1024K)]
+  0x000001e86780b9e0 WorkerThread "G1 Conc#0"                       [id=9884, stack(0x000000c74da00000,0x000000c74db00000) (1024K)]
+  0x000001e80426b8b0 ConcurrentGCThread "G1 Refine#0"               [id=22328, stack(0x000000c74db00000,0x000000c74dc00000) (1024K)]
+  0x000001e80426c0e0 ConcurrentGCThread "G1 Service"                [id=20676, stack(0x000000c74dc00000,0x000000c74dd00000) (1024K)]
+Total: 7
+
+Threads with active compile tasks:
+Total: 0
+
+VM state: not at safepoint (normal execution)
+
+VM Mutex/Monitor currently owned by a thread: None
+
+Heap address: 0x0000000084c00000, size: 1972 MB, Compressed Oops mode: 32-bit
+
+CDS archive(s) mapped at: [0x000001e805000000-0x000001e805d70000-0x000001e805d70000), size 14090240, SharedBaseAddress: 0x000001e805000000, ArchiveRelocationMode: 1.
+Compressed class space mapped at: 0x000001e806000000-0x000001e846000000, reserved size: 1073741824
+Narrow klass base: 0x000001e805000000, Narrow klass shift: 0, Narrow klass range: 0x41000000
+
+GC Precious Log:
+ CardTable entry size: 512
+ Card Set container configuration: InlinePtr #cards 5 size 8 Array Of Cards #cards 10 size 36 Howl #buckets 4 coarsen threshold 1843 Howl Bitmap #cards 512 size 80 coarsen threshold 460 Card regions per heap region 1 cards per card region 2048
+ CPUs: 8 total, 8 available
+ Memory: 7883M
+ Large Page Support: Disabled
+ NUMA Support: Disabled
+ Compressed Oops: Enabled (32-bit)
+ Heap Region Size: 1M
+ Heap Min Capacity: 8M
+ Heap Initial Capacity: 124M
+ Heap Max Capacity: 1972M
+ Pre-touch: Disabled
+ Parallel Workers: 8
+ Concurrent Workers: 2
+ Concurrent Refinement Workers: 8
+ Periodic GC: Disabled
+
+Heap:
+ garbage-first heap   total reserved 2019328K, committed 126976K, used 19456K [0x0000000084c00000, 0x0000000100000000)
+  region size 1024K, 20 young (20480K), 0 survivors (0K)
+ Metaspace       used 5817K, committed 6080K, reserved 1114112K
+  class space    used 706K, committed 832K, reserved 1048576K
+
+Heap Regions: E=young(eden), S=young(survivor), O=old, HS=humongous(starts), HC=humongous(continues), CS=collection set, F=free, TAMS=top-at-mark-start, PB=parsable bottom
+|   0|0x0000000084c00000, 0x0000000084c00000, 0x0000000084d00000|  0%| F|  |TAMS 0x0000000084c00000| PB 0x0000000084c00000| Untracked |  0
+|   1|0x0000000084d00000, 0x0000000084d00000, 0x0000000084e00000|  0%| F|  |TAMS 0x0000000084d00000| PB 0x0000000084d00000| Untracked |  0
+|   2|0x0000000084e00000, 0x0000000084e00000, 0x0000000084f00000|  0%| F|  |TAMS 0x0000000084e00000| PB 0x0000000084e00000| Untracked |  0
+|   3|0x0000000084f00000, 0x0000000084f00000, 0x0000000085000000|  0%| F|  |TAMS 0x0000000084f00000| PB 0x0000000084f00000| Untracked |  0
+|   4|0x0000000085000000, 0x0000000085000000, 0x0000000085100000|  0%| F|  |TAMS 0x0000000085000000| PB 0x0000000085000000| Untracked |  0
+|   5|0x0000000085100000, 0x0000000085100000, 0x0000000085200000|  0%| F|  |TAMS 0x0000000085100000| PB 0x0000000085100000| Untracked |  0
+|   6|0x0000000085200000, 0x0000000085200000, 0x0000000085300000|  0%| F|  |TAMS 0x0000000085200000| PB 0x0000000085200000| Untracked |  0
+|   7|0x0000000085300000, 0x0000000085300000, 0x0000000085400000|  0%| F|  |TAMS 0x0000000085300000| PB 0x0000000085300000| Untracked |  0
+|   8|0x0000000085400000, 0x0000000085400000, 0x0000000085500000|  0%| F|  |TAMS 0x0000000085400000| PB 0x0000000085400000| Untracked |  0
+|   9|0x0000000085500000, 0x0000000085500000, 0x0000000085600000|  0%| F|  |TAMS 0x0000000085500000| PB 0x0000000085500000| Untracked |  0
+|  10|0x0000000085600000, 0x0000000085600000, 0x0000000085700000|  0%| F|  |TAMS 0x0000000085600000| PB 0x0000000085600000| Untracked |  0
+|  11|0x0000000085700000, 0x0000000085700000, 0x0000000085800000|  0%| F|  |TAMS 0x0000000085700000| PB 0x0000000085700000| Untracked |  0
+|  12|0x0000000085800000, 0x0000000085800000, 0x0000000085900000|  0%| F|  |TAMS 0x0000000085800000| PB 0x0000000085800000| Untracked |  0
+|  13|0x0000000085900000, 0x0000000085900000, 0x0000000085a00000|  0%| F|  |TAMS 0x0000000085900000| PB 0x0000000085900000| Untracked |  0
+|  14|0x0000000085a00000, 0x0000000085a00000, 0x0000000085b00000|  0%| F|  |TAMS 0x0000000085a00000| PB 0x0000000085a00000| Untracked |  0
+|  15|0x0000000085b00000, 0x0000000085b00000, 0x0000000085c00000|  0%| F|  |TAMS 0x0000000085b00000| PB 0x0000000085b00000| Untracked |  0
+|  16|0x0000000085c00000, 0x0000000085c00000, 0x0000000085d00000|  0%| F|  |TAMS 0x0000000085c00000| PB 0x0000000085c00000| Untracked |  0
+|  17|0x0000000085d00000, 0x0000000085d00000, 0x0000000085e00000|  0%| F|  |TAMS 0x0000000085d00000| PB 0x0000000085d00000| Untracked |  0
+|  18|0x0000000085e00000, 0x0000000085e00000, 0x0000000085f00000|  0%| F|  |TAMS 0x0000000085e00000| PB 0x0000000085e00000| Untracked |  0
+|  19|0x0000000085f00000, 0x0000000085f00000, 0x0000000086000000|  0%| F|  |TAMS 0x0000000085f00000| PB 0x0000000085f00000| Untracked |  0
+|  20|0x0000000086000000, 0x0000000086000000, 0x0000000086100000|  0%| F|  |TAMS 0x0000000086000000| PB 0x0000000086000000| Untracked |  0
+|  21|0x0000000086100000, 0x0000000086100000, 0x0000000086200000|  0%| F|  |TAMS 0x0000000086100000| PB 0x0000000086100000| Untracked |  0
+|  22|0x0000000086200000, 0x0000000086200000, 0x0000000086300000|  0%| F|  |TAMS 0x0000000086200000| PB 0x0000000086200000| Untracked |  0
+|  23|0x0000000086300000, 0x0000000086300000, 0x0000000086400000|  0%| F|  |TAMS 0x0000000086300000| PB 0x0000000086300000| Untracked |  0
+|  24|0x0000000086400000, 0x0000000086400000, 0x0000000086500000|  0%| F|  |TAMS 0x0000000086400000| PB 0x0000000086400000| Untracked |  0
+|  25|0x0000000086500000, 0x0000000086500000, 0x0000000086600000|  0%| F|  |TAMS 0x0000000086500000| PB 0x0000000086500000| Untracked |  0
+|  26|0x0000000086600000, 0x0000000086600000, 0x0000000086700000|  0%| F|  |TAMS 0x0000000086600000| PB 0x0000000086600000| Untracked |  0
+|  27|0x0000000086700000, 0x0000000086700000, 0x0000000086800000|  0%| F|  |TAMS 0x0000000086700000| PB 0x0000000086700000| Untracked |  0
+|  28|0x0000000086800000, 0x0000000086800000, 0x0000000086900000|  0%| F|  |TAMS 0x0000000086800000| PB 0x0000000086800000| Untracked |  0
+|  29|0x0000000086900000, 0x0000000086900000, 0x0000000086a00000|  0%| F|  |TAMS 0x0000000086900000| PB 0x0000000086900000| Untracked |  0
+|  30|0x0000000086a00000, 0x0000000086a00000, 0x0000000086b00000|  0%| F|  |TAMS 0x0000000086a00000| PB 0x0000000086a00000| Untracked |  0
+|  31|0x0000000086b00000, 0x0000000086b00000, 0x0000000086c00000|  0%| F|  |TAMS 0x0000000086b00000| PB 0x0000000086b00000| Untracked |  0
+|  32|0x0000000086c00000, 0x0000000086c00000, 0x0000000086d00000|  0%| F|  |TAMS 0x0000000086c00000| PB 0x0000000086c00000| Untracked |  0
+|  33|0x0000000086d00000, 0x0000000086d00000, 0x0000000086e00000|  0%| F|  |TAMS 0x0000000086d00000| PB 0x0000000086d00000| Untracked |  0
+|  34|0x0000000086e00000, 0x0000000086e00000, 0x0000000086f00000|  0%| F|  |TAMS 0x0000000086e00000| PB 0x0000000086e00000| Untracked |  0
+|  35|0x0000000086f00000, 0x0000000086f00000, 0x0000000087000000|  0%| F|  |TAMS 0x0000000086f00000| PB 0x0000000086f00000| Untracked |  0
+|  36|0x0000000087000000, 0x0000000087000000, 0x0000000087100000|  0%| F|  |TAMS 0x0000000087000000| PB 0x0000000087000000| Untracked |  0
+|  37|0x0000000087100000, 0x0000000087100000, 0x0000000087200000|  0%| F|  |TAMS 0x0000000087100000| PB 0x0000000087100000| Untracked |  0
+|  38|0x0000000087200000, 0x0000000087200000, 0x0000000087300000|  0%| F|  |TAMS 0x0000000087200000| PB 0x0000000087200000| Untracked |  0
+|  39|0x0000000087300000, 0x0000000087300000, 0x0000000087400000|  0%| F|  |TAMS 0x0000000087300000| PB 0x0000000087300000| Untracked |  0
+|  40|0x0000000087400000, 0x0000000087400000, 0x0000000087500000|  0%| F|  |TAMS 0x0000000087400000| PB 0x0000000087400000| Untracked |  0
+|  41|0x0000000087500000, 0x0000000087500000, 0x0000000087600000|  0%| F|  |TAMS 0x0000000087500000| PB 0x0000000087500000| Untracked |  0
+|  42|0x0000000087600000, 0x0000000087600000, 0x0000000087700000|  0%| F|  |TAMS 0x0000000087600000| PB 0x0000000087600000| Untracked |  0
+|  43|0x0000000087700000, 0x0000000087700000, 0x0000000087800000|  0%| F|  |TAMS 0x0000000087700000| PB 0x0000000087700000| Untracked |  0
+|  44|0x0000000087800000, 0x0000000087800000, 0x0000000087900000|  0%| F|  |TAMS 0x0000000087800000| PB 0x0000000087800000| Untracked |  0
+|  45|0x0000000087900000, 0x0000000087900000, 0x0000000087a00000|  0%| F|  |TAMS 0x0000000087900000| PB 0x0000000087900000| Untracked |  0
+|  46|0x0000000087a00000, 0x0000000087a00000, 0x0000000087b00000|  0%| F|  |TAMS 0x0000000087a00000| PB 0x0000000087a00000| Untracked |  0
+|  47|0x0000000087b00000, 0x0000000087b00000, 0x0000000087c00000|  0%| F|  |TAMS 0x0000000087b00000| PB 0x0000000087b00000| Untracked |  0
+|  48|0x0000000087c00000, 0x0000000087c00000, 0x0000000087d00000|  0%| F|  |TAMS 0x0000000087c00000| PB 0x0000000087c00000| Untracked |  0
+|  49|0x0000000087d00000, 0x0000000087d00000, 0x0000000087e00000|  0%| F|  |TAMS 0x0000000087d00000| PB 0x0000000087d00000| Untracked |  0
+|  50|0x0000000087e00000, 0x0000000087e00000, 0x0000000087f00000|  0%| F|  |TAMS 0x0000000087e00000| PB 0x0000000087e00000| Untracked |  0
+|  51|0x0000000087f00000, 0x0000000087f00000, 0x0000000088000000|  0%| F|  |TAMS 0x0000000087f00000| PB 0x0000000087f00000| Untracked |  0
+|  52|0x0000000088000000, 0x0000000088000000, 0x0000000088100000|  0%| F|  |TAMS 0x0000000088000000| PB 0x0000000088000000| Untracked |  0
+|  53|0x0000000088100000, 0x0000000088100000, 0x0000000088200000|  0%| F|  |TAMS 0x0000000088100000| PB 0x0000000088100000| Untracked |  0
+|  54|0x0000000088200000, 0x0000000088200000, 0x0000000088300000|  0%| F|  |TAMS 0x0000000088200000| PB 0x0000000088200000| Untracked |  0
+|  55|0x0000000088300000, 0x0000000088300000, 0x0000000088400000|  0%| F|  |TAMS 0x0000000088300000| PB 0x0000000088300000| Untracked |  0
+|  56|0x0000000088400000, 0x0000000088400000, 0x0000000088500000|  0%| F|  |TAMS 0x0000000088400000| PB 0x0000000088400000| Untracked |  0
+|  57|0x0000000088500000, 0x0000000088500000, 0x0000000088600000|  0%| F|  |TAMS 0x0000000088500000| PB 0x0000000088500000| Untracked |  0
+|  58|0x0000000088600000, 0x0000000088600000, 0x0000000088700000|  0%| F|  |TAMS 0x0000000088600000| PB 0x0000000088600000| Untracked |  0
+|  59|0x0000000088700000, 0x0000000088700000, 0x0000000088800000|  0%| F|  |TAMS 0x0000000088700000| PB 0x0000000088700000| Untracked |  0
+|  60|0x0000000088800000, 0x0000000088800000, 0x0000000088900000|  0%| F|  |TAMS 0x0000000088800000| PB 0x0000000088800000| Untracked |  0
+|  61|0x0000000088900000, 0x0000000088900000, 0x0000000088a00000|  0%| F|  |TAMS 0x0000000088900000| PB 0x0000000088900000| Untracked |  0
+|  62|0x0000000088a00000, 0x0000000088a00000, 0x0000000088b00000|  0%| F|  |TAMS 0x0000000088a00000| PB 0x0000000088a00000| Untracked |  0
+|  63|0x0000000088b00000, 0x0000000088b00000, 0x0000000088c00000|  0%| F|  |TAMS 0x0000000088b00000| PB 0x0000000088b00000| Untracked |  0
+|  64|0x0000000088c00000, 0x0000000088c00000, 0x0000000088d00000|  0%| F|  |TAMS 0x0000000088c00000| PB 0x0000000088c00000| Untracked |  0
+|  65|0x0000000088d00000, 0x0000000088d00000, 0x0000000088e00000|  0%| F|  |TAMS 0x0000000088d00000| PB 0x0000000088d00000| Untracked |  0
+|  66|0x0000000088e00000, 0x0000000088e00000, 0x0000000088f00000|  0%| F|  |TAMS 0x0000000088e00000| PB 0x0000000088e00000| Untracked |  0
+|  67|0x0000000088f00000, 0x0000000088f00000, 0x0000000089000000|  0%| F|  |TAMS 0x0000000088f00000| PB 0x0000000088f00000| Untracked |  0
+|  68|0x0000000089000000, 0x0000000089000000, 0x0000000089100000|  0%| F|  |TAMS 0x0000000089000000| PB 0x0000000089000000| Untracked |  0
+|  69|0x0000000089100000, 0x0000000089100000, 0x0000000089200000|  0%| F|  |TAMS 0x0000000089100000| PB 0x0000000089100000| Untracked |  0
+|  70|0x0000000089200000, 0x0000000089200000, 0x0000000089300000|  0%| F|  |TAMS 0x0000000089200000| PB 0x0000000089200000| Untracked |  0
+|  71|0x0000000089300000, 0x0000000089300000, 0x0000000089400000|  0%| F|  |TAMS 0x0000000089300000| PB 0x0000000089300000| Untracked |  0
+|  72|0x0000000089400000, 0x0000000089400000, 0x0000000089500000|  0%| F|  |TAMS 0x0000000089400000| PB 0x0000000089400000| Untracked |  0
+|  73|0x0000000089500000, 0x0000000089500000, 0x0000000089600000|  0%| F|  |TAMS 0x0000000089500000| PB 0x0000000089500000| Untracked |  0
+|  74|0x0000000089600000, 0x0000000089600000, 0x0000000089700000|  0%| F|  |TAMS 0x0000000089600000| PB 0x0000000089600000| Untracked |  0
+|  75|0x0000000089700000, 0x0000000089700000, 0x0000000089800000|  0%| F|  |TAMS 0x0000000089700000| PB 0x0000000089700000| Untracked |  0
+|  76|0x0000000089800000, 0x0000000089800000, 0x0000000089900000|  0%| F|  |TAMS 0x0000000089800000| PB 0x0000000089800000| Untracked |  0
+|  77|0x0000000089900000, 0x0000000089900000, 0x0000000089a00000|  0%| F|  |TAMS 0x0000000089900000| PB 0x0000000089900000| Untracked |  0
+|  78|0x0000000089a00000, 0x0000000089a00000, 0x0000000089b00000|  0%| F|  |TAMS 0x0000000089a00000| PB 0x0000000089a00000| Untracked |  0
+|  79|0x0000000089b00000, 0x0000000089b00000, 0x0000000089c00000|  0%| F|  |TAMS 0x0000000089b00000| PB 0x0000000089b00000| Untracked |  0
+|  80|0x0000000089c00000, 0x0000000089c00000, 0x0000000089d00000|  0%| F|  |TAMS 0x0000000089c00000| PB 0x0000000089c00000| Untracked |  0
+|  81|0x0000000089d00000, 0x0000000089d00000, 0x0000000089e00000|  0%| F|  |TAMS 0x0000000089d00000| PB 0x0000000089d00000| Untracked |  0
+|  82|0x0000000089e00000, 0x0000000089e00000, 0x0000000089f00000|  0%| F|  |TAMS 0x0000000089e00000| PB 0x0000000089e00000| Untracked |  0
+|  83|0x0000000089f00000, 0x0000000089f00000, 0x000000008a000000|  0%| F|  |TAMS 0x0000000089f00000| PB 0x0000000089f00000| Untracked |  0
+|  84|0x000000008a000000, 0x000000008a000000, 0x000000008a100000|  0%| F|  |TAMS 0x000000008a000000| PB 0x000000008a000000| Untracked |  0
+|  85|0x000000008a100000, 0x000000008a100000, 0x000000008a200000|  0%| F|  |TAMS 0x000000008a100000| PB 0x000000008a100000| Untracked |  0
+|  86|0x000000008a200000, 0x000000008a200000, 0x000000008a300000|  0%| F|  |TAMS 0x000000008a200000| PB 0x000000008a200000| Untracked |  0
+|  87|0x000000008a300000, 0x000000008a300000, 0x000000008a400000|  0%| F|  |TAMS 0x000000008a300000| PB 0x000000008a300000| Untracked |  0
+|  88|0x000000008a400000, 0x000000008a400000, 0x000000008a500000|  0%| F|  |TAMS 0x000000008a400000| PB 0x000000008a400000| Untracked |  0
+|  89|0x000000008a500000, 0x000000008a500000, 0x000000008a600000|  0%| F|  |TAMS 0x000000008a500000| PB 0x000000008a500000| Untracked |  0
+|  90|0x000000008a600000, 0x000000008a600000, 0x000000008a700000|  0%| F|  |TAMS 0x000000008a600000| PB 0x000000008a600000| Untracked |  0
+|  91|0x000000008a700000, 0x000000008a700000, 0x000000008a800000|  0%| F|  |TAMS 0x000000008a700000| PB 0x000000008a700000| Untracked |  0
+|  92|0x000000008a800000, 0x000000008a800000, 0x000000008a900000|  0%| F|  |TAMS 0x000000008a800000| PB 0x000000008a800000| Untracked |  0
+|  93|0x000000008a900000, 0x000000008a900000, 0x000000008aa00000|  0%| F|  |TAMS 0x000000008a900000| PB 0x000000008a900000| Untracked |  0
+|  94|0x000000008aa00000, 0x000000008aa00000, 0x000000008ab00000|  0%| F|  |TAMS 0x000000008aa00000| PB 0x000000008aa00000| Untracked |  0
+|  95|0x000000008ab00000, 0x000000008ab00000, 0x000000008ac00000|  0%| F|  |TAMS 0x000000008ab00000| PB 0x000000008ab00000| Untracked |  0
+|  96|0x000000008ac00000, 0x000000008ac00000, 0x000000008ad00000|  0%| F|  |TAMS 0x000000008ac00000| PB 0x000000008ac00000| Untracked |  0
+|  97|0x000000008ad00000, 0x000000008ad00000, 0x000000008ae00000|  0%| F|  |TAMS 0x000000008ad00000| PB 0x000000008ad00000| Untracked |  0
+|  98|0x000000008ae00000, 0x000000008ae00000, 0x000000008af00000|  0%| F|  |TAMS 0x000000008ae00000| PB 0x000000008ae00000| Untracked |  0
+|  99|0x000000008af00000, 0x000000008af00000, 0x000000008b000000|  0%| F|  |TAMS 0x000000008af00000| PB 0x000000008af00000| Untracked |  0
+| 100|0x000000008b000000, 0x000000008b000000, 0x000000008b100000|  0%| F|  |TAMS 0x000000008b000000| PB 0x000000008b000000| Untracked |  0
+| 101|0x000000008b100000, 0x000000008b100000, 0x000000008b200000|  0%| F|  |TAMS 0x000000008b100000| PB 0x000000008b100000| Untracked |  0
+| 102|0x000000008b200000, 0x000000008b200000, 0x000000008b300000|  0%| F|  |TAMS 0x000000008b200000| PB 0x000000008b200000| Untracked |  0
+| 103|0x000000008b300000, 0x000000008b300000, 0x000000008b400000|  0%| F|  |TAMS 0x000000008b300000| PB 0x000000008b300000| Untracked |  0
+| 104|0x000000008b400000, 0x000000008b47ae48, 0x000000008b500000| 48%| E|  |TAMS 0x000000008b400000| PB 0x000000008b400000| Complete |  0
+| 105|0x000000008b500000, 0x000000008b600000, 0x000000008b600000|100%| E|CS|TAMS 0x000000008b500000| PB 0x000000008b500000| Complete |  0
+| 106|0x000000008b600000, 0x000000008b700000, 0x000000008b700000|100%| E|CS|TAMS 0x000000008b600000| PB 0x000000008b600000| Complete |  0
+| 107|0x000000008b700000, 0x000000008b800000, 0x000000008b800000|100%| E|CS|TAMS 0x000000008b700000| PB 0x000000008b700000| Complete |  0
+| 108|0x000000008b800000, 0x000000008b900000, 0x000000008b900000|100%| E|CS|TAMS 0x000000008b800000| PB 0x000000008b800000| Complete |  0
+| 109|0x000000008b900000, 0x000000008ba00000, 0x000000008ba00000|100%| E|CS|TAMS 0x000000008b900000| PB 0x000000008b900000| Complete |  0
+| 110|0x000000008ba00000, 0x000000008bb00000, 0x000000008bb00000|100%| E|CS|TAMS 0x000000008ba00000| PB 0x000000008ba00000| Complete |  0
+| 111|0x000000008bb00000, 0x000000008bc00000, 0x000000008bc00000|100%| E|CS|TAMS 0x000000008bb00000| PB 0x000000008bb00000| Complete |  0
+| 112|0x000000008bc00000, 0x000000008bd00000, 0x000000008bd00000|100%| E|CS|TAMS 0x000000008bc00000| PB 0x000000008bc00000| Complete |  0
+| 113|0x000000008bd00000, 0x000000008be00000, 0x000000008be00000|100%| E|CS|TAMS 0x000000008bd00000| PB 0x000000008bd00000| Complete |  0
+| 114|0x000000008be00000, 0x000000008bf00000, 0x000000008bf00000|100%| E|CS|TAMS 0x000000008be00000| PB 0x000000008be00000| Complete |  0
+| 115|0x000000008bf00000, 0x000000008c000000, 0x000000008c000000|100%| E|CS|TAMS 0x000000008bf00000| PB 0x000000008bf00000| Complete |  0
+| 116|0x000000008c000000, 0x000000008c100000, 0x000000008c100000|100%| E|CS|TAMS 0x000000008c000000| PB 0x000000008c000000| Complete |  0
+| 117|0x000000008c100000, 0x000000008c200000, 0x000000008c200000|100%| E|CS|TAMS 0x000000008c100000| PB 0x000000008c100000| Complete |  0
+| 118|0x000000008c200000, 0x000000008c300000, 0x000000008c300000|100%| E|CS|TAMS 0x000000008c200000| PB 0x000000008c200000| Complete |  0
+| 119|0x000000008c300000, 0x000000008c400000, 0x000000008c400000|100%| E|CS|TAMS 0x000000008c300000| PB 0x000000008c300000| Complete |  0
+| 120|0x000000008c400000, 0x000000008c500000, 0x000000008c500000|100%| E|CS|TAMS 0x000000008c400000| PB 0x000000008c400000| Complete |  0
+| 121|0x000000008c500000, 0x000000008c600000, 0x000000008c600000|100%| E|CS|TAMS 0x000000008c500000| PB 0x000000008c500000| Complete |  0
+| 122|0x000000008c600000, 0x000000008c700000, 0x000000008c700000|100%| E|CS|TAMS 0x000000008c600000| PB 0x000000008c600000| Complete |  0
+| 123|0x000000008c700000, 0x000000008c800000, 0x000000008c800000|100%| E|CS|TAMS 0x000000008c700000| PB 0x000000008c700000| Complete |  0
+
+Card table byte_map: [0x000001e87f5e0000,0x000001e87f9c0000] _byte_map_base: 0x000001e87f1ba000
+
+Marking Bits: (CMBitMap*) 0x000001e8677f6670
+ Bits: [0x000001e800000000, 0x000001e801ed0000)
+
+Polling page: 0x000001e8655e0000
+
+Metaspace:
+
+Usage:
+  Non-class:      4.99 MB used.
+      Class:    706.25 KB used.
+       Both:      5.68 MB used.
+
+Virtual space:
+  Non-class space:       64.00 MB reserved,       5.12 MB (  8%) committed,  1 nodes.
+      Class space:        1.00 GB reserved,     832.00 KB ( <1%) committed,  1 nodes.
+             Both:        1.06 GB reserved,       5.94 MB ( <1%) committed. 
+
+Chunk freelists:
+   Non-Class:  9.30 MB
+       Class:  15.05 MB
+        Both:  24.34 MB
+
+MaxMetaspaceSize: unlimited
+CompressedClassSpaceSize: 1.00 GB
+Initial GC threshold: 21.00 MB
+Current GC threshold: 21.00 MB
+CDS: on
+ - commit_granule_bytes: 65536.
+ - commit_granule_words: 8192.
+ - virtual_space_node_default_size: 8388608.
+ - enlarge_chunks_in_place: 1.
+ - use_allocation_guard: 0.
+
+
+Internal statistics:
+
+num_allocs_failed_limit: 0.
+num_arena_births: 58.
+num_arena_deaths: 0.
+num_vsnodes_births: 2.
+num_vsnodes_deaths: 0.
+num_space_committed: 95.
+num_space_uncommitted: 0.
+num_chunks_returned_to_freelist: 0.
+num_chunks_taken_from_freelist: 219.
+num_chunk_merges: 0.
+num_chunk_splits: 135.
+num_chunks_enlarged: 108.
+num_inconsistent_stats: 0.
+
+CodeHeap 'non-profiled nmethods': size=120064Kb used=384Kb max_used=384Kb free=119680Kb
+ bounds [0x000001e877990000, 0x000001e877c00000, 0x000001e87eed0000]
+CodeHeap 'profiled nmethods': size=120000Kb used=1688Kb max_used=1688Kb free=118311Kb
+ bounds [0x000001e86fed0000, 0x000001e870140000, 0x000001e877400000]
+CodeHeap 'non-nmethods': size=5696Kb used=1468Kb max_used=1516Kb free=4227Kb
+ bounds [0x000001e877400000, 0x000001e877670000, 0x000001e877990000]
+CodeCache: size=245760Kb, used=3540Kb, max_used=3588Kb, free=242218Kb
+ total_blobs=1674, nmethods=1202, adapters=378, full_count=0
+Compilation: enabled, stopped_count=0, restarted_count=0
+
+Compilation events (20 events):
+Event: 0.432 Thread 0x000001e8043fb380 1192       3       java.util.jar.Attributes::putValue (13 bytes)
+Event: 0.432 Thread 0x000001e8043fb380 nmethod 1192 0x000001e87006a908 code [0x000001e87006aaa0, 0x000001e87006b278]
+Event: 0.432 Thread 0x000001e8043fb380 1193       3       java.util.jar.Attributes$Name::of (28 bytes)
+Event: 0.433 Thread 0x000001e8043fb380 nmethod 1193 0x000001e87006b308 code [0x000001e87006b480, 0x000001e87006b9e0]
+Event: 0.433 Thread 0x000001e8043fb380 1194       3       java.util.jar.Attributes::put (18 bytes)
+Event: 0.433 Thread 0x000001e8043fb380 nmethod 1194 0x000001e87006ba88 code [0x000001e87006bbc0, 0x000001e87006bf40]
+Event: 0.433 Thread 0x000001e8043fb380 1196       3       org.codehaus.plexus.util.xml.pull.MXParser::isS (30 bytes)
+Event: 0.433 Thread 0x000001e8043fb380 nmethod 1196 0x000001e87006bf88 code [0x000001e87006c0a0, 0x000001e87006c260]
+Event: 0.434 Thread 0x000001e8043fb380 1197       3       org.codehaus.plexus.util.xml.pull.MXParser::getText (125 bytes)
+Event: 0.434 Thread 0x000001e8043fb380 nmethod 1197 0x000001e87006c288 code [0x000001e87006c3e0, 0x000001e87006c8c0]
+Event: 0.434 Thread 0x000001e8043fb380 1198       3       org.codehaus.plexus.util.xml.pull.MXParser::isNameStartChar (56 bytes)
+Event: 0.434 Thread 0x000001e8043fb380 nmethod 1198 0x000001e87006c908 code [0x000001e87006ca20, 0x000001e87006cc88]
+Event: 0.434 Thread 0x000001e8043fb380 1199       3       org.codehaus.plexus.util.xml.pull.MXParser::parseEndTag (429 bytes)
+Event: 0.437 Thread 0x000001e8043fb380 nmethod 1199 0x000001e87006cd08 code [0x000001e87006d280, 0x000001e87006f960]
+Event: 0.437 Thread 0x000001e8043fb380 1200       3       org.codehaus.plexus.util.xml.pull.MXParser::parseStartTag (1190 bytes)
+Event: 0.440 Thread 0x000001e8043fb380 nmethod 1200 0x000001e87006fa08 code [0x000001e8700703a0, 0x000001e870075d80]
+Event: 0.440 Thread 0x000001e8043fb380 1201       3       org.codehaus.plexus.util.xml.pull.MXParser::newString (11 bytes)
+Event: 0.441 Thread 0x000001e8043fb380 nmethod 1201 0x000001e870075e88 code [0x000001e870075fa0, 0x000001e870076148]
+Event: 0.441 Thread 0x000001e8043fb380 1202       1       org.codehaus.plexus.util.xml.pull.MXParser::getEventType (5 bytes)
+Event: 0.441 Thread 0x000001e8043fb380 nmethod 1202 0x000001e8779e2408 code [0x000001e8779e2520, 0x000001e8779e25e8]
+
+GC Heap History (0 events):
+No events
+
+Dll operation events (8 events):
+Event: 0.007 Loaded shared library C:\Program Files\Java\jdk-23.0.1\bin\java.dll
+Event: 0.031 Loaded shared library C:\Program Files\Java\jdk-23.0.1\bin\jsvml.dll
+Event: 0.043 Loaded shared library C:\Program Files\Java\jdk-23.0.1\bin\net.dll
+Event: 0.044 Loaded shared library C:\Program Files\Java\jdk-23.0.1\bin\nio.dll
+Event: 0.047 Loaded shared library C:\Program Files\Java\jdk-23.0.1\bin\zip.dll
+Event: 0.139 Loaded shared library C:\Program Files\Java\jdk-23.0.1\bin\jimage.dll
+Event: 0.140 Loaded shared library C:\Program Files\NetBeans-23\netbeans\java\maven\lib\jansi-native\Windows\x86_64\jansi.dll
+Event: 0.148 Loaded shared library C:\Program Files\Java\jdk-23.0.1\bin\verify.dll
+
+Deoptimization events (20 events):
+Event: 0.403 Thread 0x000001e865355130 Uncommon trap: trap_request=0xffffffc6 fr.pc=0x000001e8779cb71c relative=0x00000000000003bc
+Event: 0.403 Thread 0x000001e865355130 Uncommon trap: reason=bimorphic_or_optimized_type_check action=maybe_recompile pc=0x000001e8779cb71c method=java.util.concurrent.ConcurrentHashMap.get(Ljava/lang/Object;)Ljava/lang/Object; @ 149 c2
+Event: 0.403 Thread 0x000001e865355130 DEOPT PACKING pc=0x000001e8779cb71c sp=0x000000c74d7fd420
+Event: 0.403 Thread 0x000001e865355130 DEOPT UNPACKING pc=0x000001e877457982 sp=0x000000c74d7fd3a0 mode 2
+Event: 0.403 Thread 0x000001e865355130 Uncommon trap: trap_request=0xffffffc6 fr.pc=0x000001e8779cb71c relative=0x00000000000003bc
+Event: 0.403 Thread 0x000001e865355130 Uncommon trap: reason=bimorphic_or_optimized_type_check action=maybe_recompile pc=0x000001e8779cb71c method=java.util.concurrent.ConcurrentHashMap.get(Ljava/lang/Object;)Ljava/lang/Object; @ 149 c2
+Event: 0.403 Thread 0x000001e865355130 DEOPT PACKING pc=0x000001e8779cb71c sp=0x000000c74d7fd420
+Event: 0.403 Thread 0x000001e865355130 DEOPT UNPACKING pc=0x000001e877457982 sp=0x000000c74d7fd3a0 mode 2
+Event: 0.413 Thread 0x000001e865355130 Uncommon trap: trap_request=0xffffff6e fr.pc=0x000001e8779c5030 relative=0x0000000000000410
+Event: 0.413 Thread 0x000001e865355130 Uncommon trap: reason=loop_limit_check action=maybe_recompile pc=0x000001e8779c5030 method=java.lang.StringLatin1.indexOf([BI[BII)I @ 37 c2
+Event: 0.413 Thread 0x000001e865355130 DEOPT PACKING pc=0x000001e8779c5030 sp=0x000000c74d7fda80
+Event: 0.413 Thread 0x000001e865355130 DEOPT UNPACKING pc=0x000001e877457982 sp=0x000000c74d7fd9e0 mode 2
+Event: 0.414 Thread 0x000001e865355130 Uncommon trap: trap_request=0xffffff76 fr.pc=0x000001e8779c00fc relative=0x000000000000031c
+Event: 0.414 Thread 0x000001e865355130 Uncommon trap: reason=predicate action=maybe_recompile pc=0x000001e8779c00fc method=java.util.regex.Pattern$BmpCharPropertyGreedy.match(Ljava/util/regex/Matcher;ILjava/lang/CharSequence;)Z @ 12 c2
+Event: 0.414 Thread 0x000001e865355130 DEOPT PACKING pc=0x000001e8779c00fc sp=0x000000c74d7fdcc0
+Event: 0.414 Thread 0x000001e865355130 DEOPT UNPACKING pc=0x000001e877457982 sp=0x000000c74d7fdc78 mode 2
+Event: 0.414 Thread 0x000001e865355130 Uncommon trap: trap_request=0xffffff45 fr.pc=0x000001e8779ba2b0 relative=0x00000000000000b0
+Event: 0.414 Thread 0x000001e865355130 Uncommon trap: reason=unstable_if action=reinterpret pc=0x000001e8779ba2b0 method=org.codehaus.plexus.util.xml.pull.MXParser.more()C @ 8 c2
+Event: 0.414 Thread 0x000001e865355130 DEOPT PACKING pc=0x000001e8779ba2b0 sp=0x000000c74d7fe080
+Event: 0.414 Thread 0x000001e865355130 DEOPT UNPACKING pc=0x000001e877457982 sp=0x000000c74d7fe010 mode 2
+
+Classes loaded (20 events):
+Event: 0.392 Loading class java/util/concurrent/TimeoutException
+Event: 0.392 Loading class java/util/concurrent/TimeoutException done
+Event: 0.392 Loading class java/util/concurrent/CancellationException
+Event: 0.392 Loading class java/util/concurrent/CancellationException done
+Event: 0.393 Loading class java/security/PrivilegedActionException
+Event: 0.393 Loading class java/security/PrivilegedActionException done
+Event: 0.393 Loading class sun/misc/Unsafe
+Event: 0.393 Loading class sun/misc/Unsafe done
+Event: 0.393 Loading class sun/misc/Unsafe$MemoryAccessOption
+Event: 0.393 Loading class sun/misc/Unsafe$MemoryAccessOption done
+Event: 0.394 Loading class java/lang/invoke/DirectMethodHandle$StaticAccessor
+Event: 0.394 Loading class java/lang/invoke/DirectMethodHandle$StaticAccessor done
+Event: 0.397 Loading class java/lang/reflect/ParameterizedType
+Event: 0.397 Loading class java/lang/reflect/ParameterizedType done
+Event: 0.399 Loading class java/lang/reflect/WildcardType
+Event: 0.399 Loading class java/lang/reflect/WildcardType done
+Event: 0.400 Loading class sun/reflect/generics/tree/TypeVariableSignature
+Event: 0.400 Loading class sun/reflect/generics/tree/TypeVariableSignature done
+Event: 0.411 Loading class java/lang/annotation/IncompleteAnnotationException
+Event: 0.411 Loading class java/lang/annotation/IncompleteAnnotationException done
+
+Classes unloaded (0 events):
+No events
+
+Classes redefined (0 events):
+No events
+
+Internal exceptions (20 events):
+Event: 0.143 Thread 0x000001e865355130 Exception <a 'java/lang/NullPointerException'{0x000000008c3ed890}> (0x000000008c3ed890) 
+thrown [s\open\src\hotspot\share\interpreter\linkResolver.cpp, line 1389]
+Event: 0.143 Thread 0x000001e865355130 Exception <a 'java/lang/NullPointerException'{0x000000008c3edb70}> (0x000000008c3edb70) 
+thrown [s\open\src\hotspot\share\interpreter\linkResolver.cpp, line 1389]
+Event: 0.143 Thread 0x000001e865355130 Exception <a 'java/lang/NullPointerException'{0x000000008c3ede50}> (0x000000008c3ede50) 
+thrown [s\open\src\hotspot\share\interpreter\linkResolver.cpp, line 1389]
+Event: 0.147 Thread 0x000001e865355130 Exception <a 'sun/nio/fs/WindowsException'{0x000000008c29a028}> (0x000000008c29a028) 
+thrown [s\open\src\hotspot\share\prims\jni.cpp, line 520]
+Event: 0.147 Thread 0x000001e865355130 Exception <a 'sun/nio/fs/WindowsException'{0x000000008c29a788}> (0x000000008c29a788) 
+thrown [s\open\src\hotspot\share\prims\jni.cpp, line 520]
+Event: 0.147 Thread 0x000001e865355130 Exception <a 'sun/nio/fs/WindowsException'{0x000000008c29ad78}> (0x000000008c29ad78) 
+thrown [s\open\src\hotspot\share\prims\jni.cpp, line 520]
+Event: 0.147 Thread 0x000001e865355130 Exception <a 'sun/nio/fs/WindowsException'{0x000000008c29b2f0}> (0x000000008c29b2f0) 
+thrown [s\open\src\hotspot\share\prims\jni.cpp, line 520]
+Event: 0.147 Thread 0x000001e865355130 Exception <a 'sun/nio/fs/WindowsException'{0x000000008c29b848}> (0x000000008c29b848) 
+thrown [s\open\src\hotspot\share\prims\jni.cpp, line 520]
+Event: 0.147 Thread 0x000001e865355130 Exception <a 'sun/nio/fs/WindowsException'{0x000000008c29bd50}> (0x000000008c29bd50) 
+thrown [s\open\src\hotspot\share\prims\jni.cpp, line 520]
+Event: 0.147 Thread 0x000001e865355130 Exception <a 'sun/nio/fs/WindowsException'{0x000000008c29c210}> (0x000000008c29c210) 
+thrown [s\open\src\hotspot\share\prims\jni.cpp, line 520]
+Event: 0.156 Thread 0x000001e865355130 Exception <a 'java/lang/NoSuchMethodError'{0x000000008c2e8b40}: 'void java.lang.invoke.DirectMethodHandle$Holder.invokeStatic(java.lang.Object, java.lang.Object)'> (0x000000008c2e8b40) 
+thrown [s\open\src\hotspot\share\interpreter\linkResolver.cpp, line 796]
+Event: 0.156 Thread 0x000001e865355130 Exception <a 'java/lang/NoSuchMethodError'{0x000000008c2ebf58}: 'void java.lang.invoke.DirectMethodHandle$Holder.invokeStaticInit(java.lang.Object, java.lang.Object)'> (0x000000008c2ebf58) 
+thrown [s\open\src\hotspot\share\interpreter\linkResolver.cpp, line 796]
+Event: 0.204 Thread 0x000001e865355130 Exception <a 'java/lang/NoSuchMethodError'{0x000000008c0a27a0}: 'java.lang.Object java.lang.invoke.DirectMethodHandle$Holder.invokeSpecialIFC(java.lang.Object, java.lang.Object, java.lang.Object, java.lang.Object)'> (0x000000008c0a27a0) 
+thrown [s\open\src\hotspot\share\interpreter\linkResolver.cpp, line 796]
+Event: 0.309 Thread 0x000001e865355130 Exception <a 'java/lang/NoSuchMethodError'{0x000000008ba44b80}: 'void java.lang.invoke.DirectMethodHandle$Holder.invokeSpecial(java.lang.Object, java.lang.Object, java.lang.Object)'> (0x000000008ba44b80) 
+thrown [s\open\src\hotspot\share\interpreter\linkResolver.cpp, line 796]
+Event: 0.331 Thread 0x000001e865355130 Exception <a 'java/lang/NoSuchMethodError'{0x000000008b991020}: 'java.lang.Object java.lang.invoke.DirectMethodHandle$Holder.invokeInterface(java.lang.Object, java.lang.Object)'> (0x000000008b991020) 
+thrown [s\open\src\hotspot\share\interpreter\linkResolver.cpp, line 796]
+Event: 0.339 Thread 0x000001e865355130 Exception <a 'java/lang/NoSuchMethodError'{0x000000008b82b828}: 'int java.lang.invoke.DirectMethodHandle$Holder.invokeStatic(java.lang.Object, java.lang.Object, java.lang.Object, java.lang.Object)'> (0x000000008b82b828) 
+thrown [s\open\src\hotspot\share\interpreter\linkResolver.cpp, line 796]
+Event: 0.341 Thread 0x000001e865355130 Exception <a 'java/lang/NoSuchMethodError'{0x000000008b83a178}: 'int java.lang.invoke.DirectMethodHandle$Holder.invokeSpecialIFC(java.lang.Object, java.lang.Object, java.lang.Object, java.lang.Object, java.lang.Object)'> (0x000000008b83a178) 
+thrown [s\open\src\hotspot\share\interpreter\linkResolver.cpp, line 796]
+Event: 0.373 Thread 0x000001e865355130 Exception <a 'java/lang/NoSuchMethodError'{0x000000008b7cbd60}: 'void java.lang.invoke.DirectMethodHandle$Holder.invokeStatic(java.lang.Object, int, java.lang.Object)'> (0x000000008b7cbd60) 
+thrown [s\open\src\hotspot\share\interpreter\linkResolver.cpp, line 796]
+Event: 0.405 Thread 0x000001e865355130 Exception <a 'java/lang/NoSuchMethodError'{0x000000008b537b00}: 'int java.lang.invoke.DirectMethodHandle$Holder.invokeStaticInit(java.lang.Object, java.lang.Object)'> (0x000000008b537b00) 
+thrown [s\open\src\hotspot\share\interpreter\linkResolver.cpp, line 796]
+Event: 0.411 Thread 0x000001e865355130 Exception <a 'java/lang/NoClassDefFoundError'{0x000000008b56d1e0}: javax/enterprise/inject/Typed> (0x000000008b56d1e0) 
+thrown [s\open\src\hotspot\share\classfile\systemDictionary.cpp, line 302]
+
+VM Operations (6 events):
+Event: 0.047 Executing VM operation: HandshakeAllThreads (Deoptimize)
+Event: 0.047 Executing VM operation: HandshakeAllThreads (Deoptimize) done
+Event: 0.135 Executing VM operation: HandshakeAllThreads (Deoptimize)
+Event: 0.135 Executing VM operation: HandshakeAllThreads (Deoptimize) done
+Event: 0.141 Executing VM operation: HandshakeAllThreads (Deoptimize)
+Event: 0.141 Executing VM operation: HandshakeAllThreads (Deoptimize) done
+
+Memory protections (0 events):
+No events
+
+Nmethod flushes (0 events):
+No events
+
+Events (15 events):
+Event: 0.020 Thread 0x000001e865355130 Thread added: 0x000001e865355130
+Event: 0.029 Thread 0x000001e865355130 Thread added: 0x000001e8043c6460
+Event: 0.029 Thread 0x000001e865355130 Thread added: 0x000001e8043ca290
+Event: 0.029 Thread 0x000001e865355130 Thread added: 0x000001e8043cc6f0
+Event: 0.029 Thread 0x000001e865355130 Thread added: 0x000001e8043cd240
+Event: 0.029 Thread 0x000001e865355130 Thread added: 0x000001e8043cec70
+Event: 0.029 Thread 0x000001e865355130 Thread added: 0x000001e8043d3700
+Event: 0.029 Thread 0x000001e865355130 Thread added: 0x000001e8043d22d0
+Event: 0.029 Thread 0x000001e865355130 Thread added: 0x000001e8043fb380
+Event: 0.040 Thread 0x000001e865355130 Thread added: 0x000001e8045a0600
+Event: 0.041 Thread 0x000001e865355130 Thread added: 0x000001e8045a64c0
+Event: 0.138 Thread 0x000001e865355130 Thread added: 0x000001e84a047a60
+Event: 0.148 Thread 0x000001e84a047a60 Thread exited: 0x000001e84a047a60
+Event: 0.422 Thread 0x000001e8043fb380 Thread added: 0x000001e84a9b9330
+Event: 0.424 Thread 0x000001e8043fb380 Thread added: 0x000001e84a9b9fd0
+
+
+Dynamic libraries:
+0x00007ff7e9350000 - 0x00007ff7e935e000 	C:\Program Files\Java\jdk-23.0.1\bin\java.exe
+0x00007ffb2af30000 - 0x00007ffb2b147000 	C:\WINDOWS\SYSTEM32\ntdll.dll
+0x00007ffb29c30000 - 0x00007ffb29cf4000 	C:\WINDOWS\System32\KERNEL32.DLL
+0x00007ffb287f0000 - 0x00007ffb28baa000 	C:\WINDOWS\System32\KERNELBASE.dll
+0x00007ffb286d0000 - 0x00007ffb287e1000 	C:\WINDOWS\System32\ucrtbase.dll
+0x00007ffb1f880000 - 0x00007ffb1f89b000 	C:\Program Files\Java\jdk-23.0.1\bin\VCRUNTIME140.dll
+0x00007ffb0ab80000 - 0x00007ffb0ab97000 	C:\Program Files\Java\jdk-23.0.1\bin\jli.dll
+0x00007ffb2ad40000 - 0x00007ffb2aeee000 	C:\WINDOWS\System32\USER32.dll
+0x00007ffb284c0000 - 0x00007ffb284e6000 	C:\WINDOWS\System32\win32u.dll
+0x00007ffb09110000 - 0x00007ffb093a2000 	C:\WINDOWS\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.22621.4541_none_2710d1c57384c085\COMCTL32.dll
+0x00007ffb29ff0000 - 0x00007ffb2a019000 	C:\WINDOWS\System32\GDI32.dll
+0x00007ffb29270000 - 0x00007ffb29317000 	C:\WINDOWS\System32\msvcrt.dll
+0x00007ffb283a0000 - 0x00007ffb284bb000 	C:\WINDOWS\System32\gdi32full.dll
+0x00007ffb28630000 - 0x00007ffb286ca000 	C:\WINDOWS\System32\msvcp_win.dll
+0x00007ffb29320000 - 0x00007ffb29351000 	C:\WINDOWS\System32\IMM32.DLL
+0x00007ffb232e0000 - 0x00007ffb232ec000 	C:\Program Files\Java\jdk-23.0.1\bin\vcruntime140_1.dll
+0x00007ffacf620000 - 0x00007ffacf6ae000 	C:\Program Files\Java\jdk-23.0.1\bin\msvcp140.dll
+0x00007ffa717c0000 - 0x00007ffa7250f000 	C:\Program Files\Java\jdk-23.0.1\bin\server\jvm.dll
+0x00007ffb2ac80000 - 0x00007ffb2ad32000 	C:\WINDOWS\System32\ADVAPI32.dll
+0x00007ffb2ab60000 - 0x00007ffb2ac07000 	C:\WINDOWS\System32\sechost.dll
+0x00007ffb28370000 - 0x00007ffb28398000 	C:\WINDOWS\System32\bcrypt.dll
+0x00007ffb29b10000 - 0x00007ffb29c24000 	C:\WINDOWS\System32\RPCRT4.dll
+0x00007ffb29f00000 - 0x00007ffb29f71000 	C:\WINDOWS\System32\WS2_32.dll
+0x00007ffb28020000 - 0x00007ffb2806d000 	C:\WINDOWS\SYSTEM32\POWRPROF.dll
+0x00007ffb20480000 - 0x00007ffb2048a000 	C:\WINDOWS\SYSTEM32\VERSION.dll
+0x00007ffb231b0000 - 0x00007ffb231e4000 	C:\WINDOWS\SYSTEM32\WINMM.dll
+0x00007ffb27f00000 - 0x00007ffb27f13000 	C:\WINDOWS\SYSTEM32\UMPDC.dll
+0x00007ffb27240000 - 0x00007ffb27258000 	C:\WINDOWS\SYSTEM32\kernel.appcore.dll
+0x00007ffb20eb0000 - 0x00007ffb20eba000 	C:\Program Files\Java\jdk-23.0.1\bin\jimage.dll
+0x00007ffb20820000 - 0x00007ffb20a52000 	C:\WINDOWS\SYSTEM32\DBGHELP.DLL
+0x00007ffb28d10000 - 0x00007ffb2909f000 	C:\WINDOWS\System32\combase.dll
+0x00007ffb28c30000 - 0x00007ffb28d07000 	C:\WINDOWS\System32\OLEAUT32.dll
+0x00007ffadbba0000 - 0x00007ffadbbd2000 	C:\WINDOWS\SYSTEM32\dbgcore.DLL
+0x00007ffb28bb0000 - 0x00007ffb28c2b000 	C:\WINDOWS\System32\bcryptPrimitives.dll
+0x00007ffb1f7a0000 - 0x00007ffb1f7be000 	C:\Program Files\Java\jdk-23.0.1\bin\java.dll
+0x00007ffb29d40000 - 0x00007ffb29ee5000 	C:\WINDOWS\System32\ole32.dll
+0x00007ffb2a020000 - 0x00007ffb2a898000 	C:\WINDOWS\System32\SHELL32.dll
+0x00007ffb26140000 - 0x00007ffb26a48000 	C:\WINDOWS\SYSTEM32\windows.storage.dll
+0x00007ffb26000000 - 0x00007ffb2613f000 	C:\WINDOWS\SYSTEM32\wintypes.dll
+0x00007ffb29410000 - 0x00007ffb2950a000 	C:\WINDOWS\System32\SHCORE.dll
+0x00007ffb29f80000 - 0x00007ffb29fde000 	C:\WINDOWS\System32\shlwapi.dll
+0x00007ffb28130000 - 0x00007ffb2815b000 	C:\WINDOWS\SYSTEM32\profapi.dll
+0x00007ffac4e70000 - 0x00007ffac4f47000 	C:\Program Files\Java\jdk-23.0.1\bin\jsvml.dll
+0x00007ffb20e80000 - 0x00007ffb20e90000 	C:\Program Files\Java\jdk-23.0.1\bin\net.dll
+0x00007ffb276c0000 - 0x00007ffb27729000 	C:\WINDOWS\system32\mswsock.dll
+0x00007ffb1d6b0000 - 0x00007ffb1d6c6000 	C:\Program Files\Java\jdk-23.0.1\bin\nio.dll
+0x00007ffb1d5e0000 - 0x00007ffb1d5f7000 	C:\Program Files\Java\jdk-23.0.1\bin\zip.dll
+0x00007ffafb9c0000 - 0x00007ffafb9e4000 	C:\Program Files\NetBeans-23\netbeans\java\maven\lib\jansi-native\Windows\x86_64\jansi.dll
+0x00007ffb20180000 - 0x00007ffb20190000 	C:\Program Files\Java\jdk-23.0.1\bin\verify.dll
+
+dbghelp: loaded successfully - version: 4.0.5 - missing functions: none
+symbol engine: initialized successfully - sym options: 0x614 - pdb path: .;C:\Program Files\Java\jdk-23.0.1\bin;C:\WINDOWS\SYSTEM32;C:\WINDOWS\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.22621.4541_none_2710d1c57384c085;C:\Program Files\Java\jdk-23.0.1\bin\server;C:\Program Files\NetBeans-23\netbeans\java\maven\lib\jansi-native\Windows\x86_64
+
+VM Arguments:
+jvm_args: -Dclassworlds.conf=C:\Program Files\NetBeans-23\netbeans\java\maven\bin\m2.conf -Dmaven.home=C:\Program Files\NetBeans-23\netbeans\java\maven -Dlibrary.jansi.path=C:\Program Files\NetBeans-23\netbeans\java\maven\lib\jansi-native -Dmaven.multiModuleProjectDirectory=C:\Users\User\OneDrive\Desktop\JavaProject\ICO-PROJECT-S1Y1 
+java_command: org.codehaus.plexus.classworlds.launcher.Launcher -Dexec.vmArgs= -Dexec.args=${exec.vmArgs} -classpath %classpath ${exec.mainClass} ${exec.appArgs} -Dexec.executable=C:\Program Files\Java\jdk-23.0.1\bin\java.exe -Dexec.mainClass=com.mycompany.ico_project.ComputerArithemtic -Dexec.classpathScope=runtime -Dexec.appArgs= -Dmaven.ext.class.path=C:\Program Files\NetBeans-23\netbeans\java\maven-nblib\netbeans-eventspy.jar --no-transfer-progress process-classes org.codehaus.mojo:exec-maven-plugin:3.1.0:exec
+java_class_path (initial): C:\Program Files\NetBeans-23\netbeans\java\maven\boot\plexus-classworlds-2.8.0.jar
+Launcher Type: SUN_STANDARD
+
+[Global flags]
+     intx CICompilerCount                          = 4                                         {product} {ergonomic}
+     uint ConcGCThreads                            = 2                                         {product} {ergonomic}
+     uint G1ConcRefinementThreads                  = 8                                         {product} {ergonomic}
+   size_t G1HeapRegionSize                         = 1048576                                   {product} {ergonomic}
+   size_t InitialHeapSize                          = 130023424                                 {product} {ergonomic}
+   size_t MarkStackSize                            = 4194304                                   {product} {ergonomic}
+   size_t MarkStackSizeMax                         = 536870912                                 {product} {ergonomic}
+   size_t MaxHeapSize                              = 2067791872                                {product} {ergonomic}
+   size_t MaxNewSize                               = 1240465408                                {product} {ergonomic}
+   size_t MinHeapDeltaBytes                        = 1048576                                   {product} {ergonomic}
+   size_t MinHeapSize                              = 8388608                                   {product} {ergonomic}
+    uintx NonNMethodCodeHeapSize                   = 5832704                                {pd product} {ergonomic}
+    uintx NonProfiledCodeHeapSize                  = 122945536                              {pd product} {ergonomic}
+    uintx ProfiledCodeHeapSize                     = 122880000                              {pd product} {ergonomic}
+    uintx ReservedCodeCacheSize                    = 251658240                              {pd product} {ergonomic}
+     bool SegmentedCodeCache                       = true                                      {product} {ergonomic}
+   size_t SoftMaxHeapSize                          = 2067791872                             {manageable} {ergonomic}
+     bool UseCompressedOops                        = true                           {product lp64_product} {ergonomic}
+     bool UseG1GC                                  = true                                      {product} {ergonomic}
+     bool UseLargePagesIndividualAllocation        = false                                  {pd product} {ergonomic}
+
+Logging:
+Log output configuration:
+ #0: stdout all=warning uptime,level,tags foldmultilines=false
+ #1: stderr all=off uptime,level,tags foldmultilines=false
+
+Environment Variables:
+JAVA_HOME=C:\Program Files\Java\jdk-23.0.1
+PATH=C:\oraclexe\app\oracle\product\11.2.0\server\bin;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\Common Files\Oracle\Java\java8path;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\Common Files\Intel\Shared Libraries\redist\intel64\compiler;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files (x86)\AOMEI Backupper;C:\Program Files\dotnet\;C:\Program Files\nodejs\;C:\ProgramData\chocolatey\bin;C:\Program Files\Java\jdk-23.0.1\bin;C:\Users\User\AppData\Local\Microsoft\WindowsApps;C:\Users\User\.dotnet\tools;C:\Users\User\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\User\AppData\Roaming\npm;C:\Users\User\AppData\Local\GitHubDesktop\bin;C:\Program Files\heroku\bin;C:\Users\User\AppData\Local\Microsoft\WinGet\Packages\Schniz.fnm_Microsoft.Winget.Source_8wekyb3d8bbwe;;C:\Program Files\JetBrains\WebStorm 2024.3\bin;;C:\Program Files\JetBrains\IntelliJ IDEA 2024.3.1\bin;
+USERNAME=User
+OS=Windows_NT
+PROCESSOR_IDENTIFIER=Intel64 Family 6 Model 140 Stepping 1, GenuineIntel
+TMP=C:\Users\User\AppData\Local\Temp
+TEMP=C:\Users\User\AppData\Local\Temp
+
+
+
+
+Periodic native trim disabled
+
+---------------  S Y S T E M  ---------------
+
+OS:
+ Windows 11 , 64 bit Build 22621 (10.0.22621.4391)
+OS uptime: 0 days 10:49 hours
+
+CPU: total 8 (initial active 8) (4 cores per cpu, 2 threads per core) family 6 model 140 stepping 1 microcode 0xa4, cx8, cmov, fxsr, ht, mmx, 3dnowpref, sse, sse2, sse3, ssse3, sse4.1, sse4.2, popcnt, lzcnt, tsc, tscinvbit, avx, avx2, aes, erms, clmul, bmi1, bmi2, adx, avx512f, avx512dq, avx512cd, avx512bw, avx512vl, sha, fma, vzeroupper, avx512_vpopcntdq, avx512_vpclmulqdq, avx512_vaes, avx512_vnni, clflush, clflushopt, clwb, avx512_vbmi2, avx512_vbmi, rdtscp, rdpid, fsrm, gfni, avx512_bitalg, f16c, pku, cet_ibt, cet_ss, avx512_ifma
+Processor Information for the first 8 processors :
+  Max Mhz: 3110, Current Mhz: 3110, Mhz Limit: 3110
+
+Memory: 4k page, system-wide physical 7883M (717M free)
+TotalPageFile size 16587M (AvailPageFile size 3347M)
+current process WorkingSet (physical memory assigned to process): 82M, peak: 87M
+current process commit charge ("private bytes"): 230M, peak: 236M
+
+vm_info: OpenJDK 64-Bit Server VM (23.0.1+11-39) for windows-amd64 JRE (23.0.1+11-39), built on 2024-09-30T07:20:43Z with MS VC++ 17.6 (VS2022)
+
+END.

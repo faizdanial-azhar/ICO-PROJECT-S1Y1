@@ -234,13 +234,13 @@ System.out.println("------------------------------------------------------------
         System.out.println("==============================================================");
         while (true) {
             try {
-        System.out.println("--------------------------------------------------------------");
+                System.out.println("--------------------------------------------------------------");
                 System.out.print("Enter first number (decimal): ");
                 num1 = scanner.nextInt();
 
                 System.out.print("Enter second number (decimal): ");
                 num2 = scanner.nextInt();
-System.out.println("--------------------------------------------------------------");
+                System.out.println("--------------------------------------------------------------");
                 break;
                 
             } catch (InputMismatchException e) {
@@ -270,7 +270,7 @@ System.out.println("------------------------------------------------------------
             String onesComp1 = findOnesComplement(bin1);
             System.out.println("One's complement: " + onesComp1);
             String twosComp1 = findTwosComplement(bin1);
-            System.out.println("Two's complement (One's complement + 1): " + twosComp1);
+            System.out.println("Two's complement (One's complement + 1): 1" + twosComp1);
             bin1 = twosComp1;
         }
 
@@ -282,28 +282,52 @@ System.out.println("------------------------------------------------------------
             String onesComp2 = findOnesComplement(bin2);
             System.out.println("One's complement: " + onesComp2);
             String twosComp2 = findTwosComplement(bin2);
-            System.out.println("Two's complement (One's complement + 1): " + twosComp2);
+            System.out.println("Two's complement (One's complement + 1): 1" + twosComp2);
             bin2 = twosComp2;
         }
 
         // Addition results
         System.out.println("\nAddition:");
-        System.out.println("First number:  " + bin1);
-        System.out.println("Second number: " + bin2);
-
+        if(num1 < 0) {
+            System.out.println("First number:  1" + bin1);
+        }
+        
+        if(num2 < 0) {
+            System.out.println("Second number:  1" + bin2);
+        }
+        
+        if(num1 > 0) {
+            System.out.println("First number:  " + bin1);
+        }
+        
+        if(num2 > 0) {
+            System.out.println("Second number: " + bin2);
+        }
+        
         String binarySum = addBinary(bin1, bin2);
         int decimalSum = num1 + num2;
+        
+        if(decimalSum < -8){
+            System.out.println("Binary sum:    10" + binarySum);
+        }
+        
+        if(decimalSum == -8){
+            System.out.println("Binary sum:    1" + binarySum);
+        }
 
-        System.out.println("Binary sum:    " + binarySum);
+        if(decimalSum > -8){
+            System.out.println("Binary sum:    " + binarySum);
+        }
+        
         System.out.println("Decimal sum:   " + decimalSum);
 
-        if (decimalSum < 0) {
-            System.out.println("\nFinal result is negative:");
-            String sumOnesComp = findOnesComplement(binarySum);
-            String sumTwosComp = findTwosComplement(binarySum);
-            System.out.println("One's complement of sum: " + sumOnesComp);
-            System.out.println("Two's complement of sum: " + sumTwosComp);
-        }
+//        if (decimalSum < 0) {
+//            System.out.println("\nFinal result is negative:");
+//            String sumOnesComp = findOnesComplement(binarySum);
+//            String sumTwosComp = findTwosComplement(binarySum);
+//            System.out.println("One's complement of sum: " + sumOnesComp);
+//            System.out.println("Two's complement of sum: " + sumTwosComp);
+//        }
         
         System.out.println("\n==============================================================");
 
