@@ -22,33 +22,37 @@ public class ComputerArithemtic {
     public static void MainMenu() {
 
         while (true) {
+           
+            System.out.println("\n=== PROGRAM EXECUTION AND ARITHMETIC OPERATION ===");
 
-            System.out.println("\n=== Binary Operations Calculator ===");
-            System.out.println("1. Quiz Program Execution");
-            System.out.println("2. Calculator Manual");
-            System.out.println("3. Addition");
-            System.out.println("4. Subtraction");
-            System.out.println("5. Multiplication");
-            System.out.println("6. Exit");
+            System.out.println("1. Program Execution Notes");
+            System.out.println("2. Quiz Program Execution (Based On Program Execution Notes (1))");
+            System.out.println("3. Calculator Manual");
+            System.out.println("4. Addition");
+            System.out.println("5. Subtraction");
+            System.out.println("6. Multiplication");
+            System.out.println("7. Exit");
 
             System.out.print("Choose an option: ");
             String choice = scanner.nextLine();
             if (choice.equalsIgnoreCase("1")) {
+                ProgramExecutionNotes();
+            } else if (choice.equalsIgnoreCase("2")) {
                 ProgramExecutionQuiz();
 
-            } else if (choice.equalsIgnoreCase("2")) {
+            } else if (choice.equalsIgnoreCase("3")) {
                 Manual();
 
-            } else if (choice.equalsIgnoreCase("3")) {
-                Addition();
-scanner.nextLine();
             } else if (choice.equalsIgnoreCase("4")) {
-                Substraction();
-scanner.nextLine();
+                Addition();
+                scanner.nextLine();
             } else if (choice.equalsIgnoreCase("5")) {
-                Multiplication();
-scanner.nextLine();
+                Substraction();
+                scanner.nextLine();
             } else if (choice.equalsIgnoreCase("6")) {
+                Multiplication();
+                scanner.nextLine();
+            } else if (choice.equalsIgnoreCase("7")) {
                 System.out.println("""
                                    ==========================================
                                     Goodbye!
@@ -62,6 +66,106 @@ scanner.nextLine();
             }
 
         }
+
+    }
+
+    public static void ProgramExecutionNotes() {
+        System.out.println("==========================================");
+        System.out.println("-- PROGRAM EXECUTION --");
+        System.out.println(""" 
+ 
+                                    Aritmetic Logic Unit (ALU):
+                                    -- a digital circuit that performs arithmetic and logical operations in a computer's central processing unit (CPU)
+                            
+                                    Program Counter (PC): 
+                                    --Holds the address of the next instruction to be fetched.
+                           
+                                    Instruction Register (IR): 
+                                    --Holds the currently executed instruction
+                           
+                                    Accumulator (AC):
+                                    --Temporary Storage
+                           
+                                    Memory Address Register (MAR): 
+                                    --Specifies the memory address for read/write operations.
+                           
+                                    Memory Buffer Register (MBR): 
+                                    --Contains data to be written to or read from memory.
+   
+                                    I/O Address Register (I/O AR): 
+                                    --Specifies the I/O device in use.
+                           
+                                    I/O Buffer Register (I/O BR): 
+                                    --Facilitates data exchange between I/O modules and the CPU.
+                           
+                           
+                                                          -- IN CPU --
+                                               ----------------------------------
+                                               |      +-----+       +-----+     |
+                                               |      | PC  |       | MAR |     |
+                                               |      +-----+       +-----+     |
+                                               |                                |                                  
+                                               |      +-----+       +-----+     |
+                                               |      | IR  |       | MBR |     |
+                                               |      +-----+       +-----+     |
+                                               |                                |
+                                               |      +------------+            |
+                                               |      | Execution  |            |
+                                               |      |    Unit    |            |
+                                               |      +------------+            |
+                                               |                                |
+                                               |      +-------+     +-------+   |
+                                               |      | I/O AR|     | I/O BR|   |
+                                               |      +-------+     +-------+   |                         
+                                               ----------------------------------
+                           
+                           
+                           """+"""
+                               
+                                                  -- FLOW OF PROGRAM EXECUTION --
+                               
+                       +--------------------+              +--------------------+              +--------------------+
+                       | Program Counter(PC)| -----------> |    Memory Address  | -----------> |    Random Access   |    
+                       |                    |              |    Register (MAR)  |              |     Memory (RAM)   |
+                       +--------------------+              +--------------------+              +--------------------+
+                                                                                                          |
+                                                                                                          |
+                                                                                                          |
+                                                                                                          V
+                       +--------------------+              +--------------------+              +--------------------+
+                       | Control Unit (CU)  | <----------- |    Instruction     | <----------- |    Memory Buffer   |    
+                       |                    |              |    Register (IR)   |              |    Register (MBR)  |
+                       +--------------------+              +--------------------+              +--------------------+
+                                 |
+                                 |
+                                 |
+                                 v
+                       +--------------------+                    +--------------------+ 
+                       |   Arithmetic       |                    |  Accumulator (AC)  |
+                       |  Logic Unit (ALU)  | ---------------->  |                    |
+                       +--------------------+                    +--------------------+ 
+                           
+                           
+                           
+                           
+                                      ==  How Arithmetic Logic Unit (ALU) Recieve Data ==
+                           
+                                                  +--------------------+       
+                  Instructions -----------------> |  Control Unit (CU) | 
+                                                  |  control signals   |      
+                                                  +--------------------+       
+                                                          |                            
+                                                          |     (Control Signals )     
+                                                          |
+                                                          v                         
+                                                  +--------------------+
+                                                  |   ALU (Arithmetic  |
+                       Data --------------------> |   Logic Unit)      | ----------------> Results
+           Operand Register --------------------> |   Performs Ops     | ----------------> Results Register
+                                                  +--------------------+
+                           
+                 
+                           """);
 
     }
 
@@ -187,10 +291,10 @@ scanner.nextLine();
                 System.out.println("Invalid option, please enter (a/b/c) only");
             }
         }
-System.out.println("--------------------------------------------------------------");
+        System.out.println("--------------------------------------------------------------");
         // Final Score
         System.out.println("\nYour final score: " + score + "/5");
-System.out.println("--------------------------------------------------------------");
+        System.out.println("--------------------------------------------------------------");
     }
 
     public static void Manual() {
@@ -278,9 +382,9 @@ System.out.println("------------------------------------------------------------
 
     public static void Substraction() {
         //subtraction
-   System.out.println("\n==============================================================");
+        System.out.println("\n==============================================================");
         System.out.println("                    SUBSTRACTION SELECTED");
-   System.out.println("==============================================================");
+        System.out.println("==============================================================");
         int num1;
         int num2;
         while (true) {
@@ -291,10 +395,10 @@ System.out.println("------------------------------------------------------------
 
                 System.out.print("Enter second number (decimal): ");
                 num2 = scanner.nextInt();
-System.out.println("--------------------------------------------------------------");
+                System.out.println("--------------------------------------------------------------");
                 break;
             } catch (InputMismatchException e) {
-                     System.out.println("*******************************************");
+                System.out.println("*******************************************");
                 System.out.println("Invalid Decimal Number. Please Enter Again");
                 System.out.println("*******************************************");
                 scanner.nextLine();
@@ -324,7 +428,7 @@ System.out.println("------------------------------------------------------------
         System.out.println(binary1 + " - " + binary2 + " = " + resultBinary + " (" + signCheck + ")");
         System.out.println();
         System.out.println(resultBinary + " in decimal is " + resultDecimal);
-      System.out.println("\n==============================================================");
+        System.out.println("\n==============================================================");
 
     }
 
@@ -332,7 +436,7 @@ System.out.println("------------------------------------------------------------
         int M = 0;   //multiplier
         int Q = 0;   //multiplicand
         int n = 0;   //number of bits
-      System.out.println("\n==============================================================");
+        System.out.println("\n==============================================================");
         System.out.println("                    MULTIPLICATION SELECTED");
         System.out.println("==============================================================");
         int num1;
@@ -345,7 +449,7 @@ System.out.println("------------------------------------------------------------
 
                 System.out.print("Enter second number (decimal): ");
                 num2 = scanner.nextInt();
-System.out.println("--------------------------------------------------------------");
+                System.out.println("--------------------------------------------------------------");
                 break;
             } catch (InputMismatchException e) {
                 System.out.println("*******************************************");
@@ -394,7 +498,6 @@ System.out.println("------------------------------------------------------------
 //        return String.format("%" + bit + "s", binary).replace(' ', '0');
 //    }
     //Addition Method Stop
-
     //Subtraction Method Start
     private static String toBinary(int num, int bit) {
         int mask = (1 << bit) - 1;
